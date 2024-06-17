@@ -6,6 +6,10 @@
   margin-top: calc(-1 * var(--gap-m));
 }
 
+%section-offset {
+  padding: clamp(var(--gap-sm), 4vw, var(--gap-xxl)) 0;
+}
+
 %shaker {
   animation: shaker 0.5s ease-in-out;
 }

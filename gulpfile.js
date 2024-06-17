@@ -15,12 +15,13 @@ import { scripts } from './gulp/tasks/scripts.js';
 import { images } from './gulp/tasks/images.js';
 import { sprite } from './gulp/tasks/sprite.js';
 import { fonts } from './gulp/tasks/fonts.js';
+import { videos } from './gulp/tasks/videos.js';
 import { cleanUnusedCss } from './gulp/tasks/cleanUnusedCss.js';
 
 export const start = series(
   clean,
   copyStatic,
-  parallel(fonts, pug, sass, scripts, images, sprite),
+  parallel(fonts, pug, sass, scripts, images, sprite, videos),
   server
 );
 
@@ -34,3 +35,4 @@ watch(config.styles.watch, series(sass, refresh));
 watch(config.scripts.watch, series(scripts, refresh));
 watch(config.images.watch, series(images, refresh));
 watch(config.sprite.watch, series(sprite, refresh));
+watch(config.videos.watch, series(videos, refresh));

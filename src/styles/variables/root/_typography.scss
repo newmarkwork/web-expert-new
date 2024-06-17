@@ -1,6 +1,5 @@
 :root {
-  --primary-font: 'StalinistOne', sans-serif;
-  --secondary-font: 'Inter', sans-serif;
+  --primary-font: 'Inter', sans-serif;
 
   // font sizes
   --fs-xl: clamp(36px, 5vw, 64px);
@@ -22,17 +21,5 @@
   --fw-t: 100; // thin
 
   // line heights
-  --base-line-height: 1.2;
-
-  // main styles
-  --main-title-fs: var(--fs-lg);
-  --main-title-fw: var(--fw-b);
-  --base-title-fs: var(--fs-md);
-  --base-title-fw: var(--fw-m);
-  --main-text-fs: calc(var(--fs-md) / 1.3);
-  --base-text-fs: var(--fs-sm);
-  --main-title-color: var(--primary);
-  --base-title-color: var(--primary);
-  --main-text-color: var(--secondary);
-  --base-text-color: var(--secondary);
+  --base-line-height: 1.5;
 }

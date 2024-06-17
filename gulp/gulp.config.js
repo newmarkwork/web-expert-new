@@ -2,12 +2,6 @@ const SOURCE_PATH = './src/';
 const BUILD_PATH = './build/';
 
 const config = {
-  // fonts: {
-  //   src: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
-  //   watch: `${SOURCE_PATH}assets/fonts/*.{woff,woff2}`,
-  //   dest: `${BUILD_PATH}assets/fonts/`,
-  // },
-
   fonts: {
     src: `${SOURCE_PATH}assets/fonts/*.ttf`,
     watch: `${SOURCE_PATH}assets/fonts/*.ttf`,
@@ -50,6 +44,12 @@ const config = {
     name: `sprite.svg`,
     watch: `${SOURCE_PATH}assets/svg-sprite/**/icon-*.svg`,
     dest: `${BUILD_PATH}assets/`,
+  },
+
+  videos: {
+    src: `${SOURCE_PATH}assets/video/**`,
+    watch: `${SOURCE_PATH}assets/video/**`,
+    dest: `${BUILD_PATH}assets/video/`,
   },
 
   setEnv() {

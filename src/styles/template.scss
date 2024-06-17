@@ -7,5 +7,15 @@
 @import './global';
 
 // components
+@import '../pug/components/company/logos/main-logo/main-logo';
+@import '../pug/components/controls/main-btn/main-btn';
 
+@import '../pug/components/header/header';
+
+@import '../pug/sections/index-page/hero';
+@import '../pug/sections/index-page/features';
+
+@import '../pug/components/footer/footer';
+
+//  modals
 @import '../pug/modals/modal';

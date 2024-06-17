@@ -1,0 +1,19 @@
+include ../../components/controls/main-btn/main-btn
+
+section.hero
+  .container
+    .hero__content
+      h1.main-title Не откладывайте развитие своего сайта на потом!
+      p.main-text Обратитесь к профессионалам из компании Веб-эксперт и получите комплексную веб поддержку, которая поможет вашему бизнесу расти и развиваться!
+
+      +main-btn({
+        type: 'button',
+        text: 'Оставить заявку',
+        cls: 'hero__offer-btn',
+        iconName: 'envelope',
+        iconWidth: 20,
+        iconHeight: 20,
+        iconPosition: 'left'
+      })
+
+    video(src="./assets/video/main-hero-video.mp4" loop="true" playsinline="true" preload="auto" autoplay="true" muted="true")
