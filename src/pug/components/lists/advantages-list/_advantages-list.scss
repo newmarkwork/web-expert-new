@@ -1,0 +1,43 @@
+.advantages-list {
+  @extend %list-reset;
+  @extend %flex-column;
+
+  gap: var(--gap-md);
+
+  @include media-up($tablet-width) {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &-preview-text {
+    text-align: center;
+    margin-bottom: var(--gap-xl);
+  }
+
+  &__item {
+    @extend %flex-column;
+
+    gap: var(--gap-sm);
+    align-items: center;
+    text-align: center;
+    padding: var(--gap-md);
+
+    @include media-up($tablet-width) {
+      width: calc(50% - var(--gap-sm));
+    }
+
+    @include media-up($desktop-width) {
+      width: calc(100% / 3 - var(--gap-sm));
+    }
+
+    img {
+      width: clamp(50px, 6vw, 80px);
+      height: auto;
+      object-fit: contain;
+    }
+
+    strong {
+      font-size: clamp(16px, 2.6vw, 18px);
+    }
+  }
+}

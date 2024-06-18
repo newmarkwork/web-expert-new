@@ -42,7 +42,8 @@ h6 {
 }
 
 .main-title {
-  display: block;
+  display: inline-block;
+  width: 100%;
   font-size: clamp(30px, 6vw, 60px);
   font-weight: var(--fw-r);
   margin-bottom: clamp(24px, 3vw, 40px);
@@ -50,23 +51,27 @@ h6 {
 }
 
 .main-text {
-  display: block;
+  display: inline-block;
+  width: 100%;
   font-size: clamp(14px, 2.6vw, 18px);
   font-weight: var(--fw-l);
   color: var(--white);
 }
 
 .base-title {
-  display: block;
-  // font-size: clamp(14px, 2.6vw, 18px);
-  // font-weight: var(--fw-l);
-  // color: var(--white);
+  display: inline-block;
+  width: 100%;
+  font-size: clamp(24px, 3.2vw, 60px);
+  font-weight: var(--fw-r);
+  color: var(--black);
+  text-align: center;
 }
 
 .base-text {
-  display: block;
-  // font-size: var(--base-text-fs);
-  // color: var(--base-text-color);
+  display: inline-block;
+  width: 100%;
+  font-size: clamp(14px, 2.6vw, 18px);
+  color: var(--black);
 }
 
 .text-italic {

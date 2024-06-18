@@ -7,15 +7,18 @@
 @import './global';
 
 // components
+@import '../pug/components/header/header';
 @import '../pug/components/company/logos/main-logo/main-logo';
 @import '../pug/components/controls/main-btn/main-btn';
+@import '../pug/components/lists/advantages-list/advantages-list';
+@import '../pug/components/footer/footer';
 
-@import '../pug/components/header/header';
+// sections
 
 @import '../pug/sections/index-page/hero';
 @import '../pug/sections/index-page/features';
-
-@import '../pug/components/footer/footer';
+@import '../pug/sections/index-page/about';
+@import '../pug/sections/index-page/advantages';
 
 //  modals
 @import '../pug/modals/modal';

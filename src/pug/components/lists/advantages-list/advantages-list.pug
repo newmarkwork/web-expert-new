@@ -1,0 +1,10 @@
+mixin advantages-list(data)
+  if data.previewText
+    p.base-text.advantages-list-preview-text!= data.previewText
+  ul.advantages-list
+    each item of data.items
+      li.advantages-list__item
+        if item.iconName
+          img(src=`./assets/images/${item.iconName}.svg` alt= item.title width="50" height="50")
+        strong!= item.title
+        p.base-text!= item.text

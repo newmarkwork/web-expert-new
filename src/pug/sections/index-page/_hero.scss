@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-
   padding: clamp(40px, 5vw, 120px) 0 clamp(120px, 8vw, 160px);
   background-color: var(--primary);
   overflow: hidden;
@@ -26,7 +25,6 @@
     background-size: cover;
     width: 50%;
     height: calc(100% - 30px);
-    z-index: 2;
   }
 
   &__content {
