@@ -1,0 +1,15 @@
+.services {
+  @extend %section-offset;
+
+  &__list {
+    @extend %list-reset;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: var(--gap-lg);
+
+    &-item {
+    }
+  }
+}

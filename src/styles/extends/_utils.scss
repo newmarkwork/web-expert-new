@@ -6,8 +6,12 @@
   margin-top: calc(-1 * var(--gap-m));
 }
 
+%section-accent-bg {
+  background-color: var(--primary);
+}
+
 %section-offset {
-  padding: clamp(var(--gap-sm), 4vw, var(--gap-xxl)) 0;
+  padding: clamp(var(--gap-xxl), 6vw, var(--gap-xxxl)) 0;
 }
 
 %shaker {

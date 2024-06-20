@@ -1,0 +1,49 @@
+include ../../controls/main-btn/main-btn
+
+mixin service-preview-card(data)
+  .service-preview-card
+    .service-preview-card__header
+      small Поддержка
+      span!= data.type
+    .service-preview-card__content
+      .service-preview-card__content-section
+        p!= data.text
+
+      .service-preview-card__content-section
+        span.service-preview-card__content-section-title Специалисты:
+        ul.service-preview-card__stuff-list
+          each person in data.stuff
+            li.service-preview-card__stuff-list-item!= person
+      .service-preview-card__content-section
+        span.service-preview-card__content-section-title Входит в тариф:
+
+        ul.service-preview-card__works-list
+          if data.works.note
+            li!= data.works.note
+          each work in data.works.items
+            li!= work
+      .service-preview-card__footer
+        span.service-preview-card__price!= data.cost
+
+        .flex-row
+          +main-btn({
+            type: 'button',
+            text: 'Оставить заявку',
+            iconName: 'envelope',
+            iconWidth: 20,
+            iconHeight: 20,
+            iconPosition: 'left'
+          })
+
+          +main-btn({
+            type: 'link',
+            href: '#',
+            text: 'Подробнее',
+            cls: 'main-btn--outlined',
+          })
+
+
+
+
+
+

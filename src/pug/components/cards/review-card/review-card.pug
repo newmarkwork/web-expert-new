@@ -1,0 +1,17 @@
+mixin review-card(review)
+  .review-card
+    .review-card__header
+      span.review-card__author!= review.authorName
+      //- .review-card__rate(aria-label="Рейтинг: 3")
+        .review-card__rate-item(aria-hidden="true")
+          svg(width="14" height="14")
+            use(xlink:href="./assets/sprite.svg#icon-rate")
+        .review-card__rate-item(aria-hidden="true")
+          svg(width="14" height="14")
+            use(xlink:href="./assets/sprite.svg#icon-rate")
+        .review-card__rate-item(aria-hidden="true")
+          svg(width="14" height="14")
+            use(xlink:href="./assets/sprite.svg#icon-rate")
+
+      span.review-card__date!= review.date
+    .review-card__content(data-collapsed-text="100" data-expanded-text!= review.text data-collapsed-btn-text="Смотреть весь отзыв")!= review.text

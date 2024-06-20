@@ -1,0 +1,14 @@
+.reviews {
+  @extend %section-offset;
+  @extend %section-accent-bg;
+
+  .base-title {
+    color: var(--white);
+  }
+
+  .swiper-slide {
+    width: 100%;
+    max-width: 440px;
+    max-height: 220px;
+  }
+}

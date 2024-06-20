@@ -39,5 +39,9 @@
     strong {
       font-size: clamp(16px, 2.6vw, 18px);
     }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }

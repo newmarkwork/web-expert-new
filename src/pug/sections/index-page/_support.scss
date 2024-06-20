@@ -1,0 +1,24 @@
+.support {
+  @extend %section-offset;
+  @extend %section-accent-bg;
+
+  * {
+    text-align: center;
+  }
+
+  .base-title,
+  .base-text {
+    color: var(--white);
+  }
+
+  small {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .main-btn {
+    background-color: var(--secondary);
+    margin: 0 auto;
+  }
+}
