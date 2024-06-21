@@ -14,36 +14,22 @@ mixin service-preview-card(data)
         ul.service-preview-card__stuff-list
           each person in data.stuff
             li.service-preview-card__stuff-list-item!= person
-      .service-preview-card__content-section
-        span.service-preview-card__content-section-title Входит в тариф:
+    .service-preview-card__footer
+      span.service-preview-card__price!= data.cost
 
-        ul.service-preview-card__works-list
-          if data.works.note
-            li!= data.works.note
-          each work in data.works.items
-            li!= work
-      .service-preview-card__footer
-        span.service-preview-card__price!= data.cost
+      .flex-row
+        +main-btn({
+          type: 'button',
+          text: 'Оставить заявку',
+          iconName: 'envelope',
+          iconWidth: 20,
+          iconHeight: 20,
+          iconPosition: 'left',
+        })
 
-        .flex-row
-          +main-btn({
-            type: 'button',
-            text: 'Оставить заявку',
-            iconName: 'envelope',
-            iconWidth: 20,
-            iconHeight: 20,
-            iconPosition: 'left'
-          })
-
-          +main-btn({
-            type: 'link',
-            href: '#',
-            text: 'Подробнее',
-            cls: 'main-btn--outlined',
-          })
-
-
-
-
-
-
+        +main-btn({
+          type: 'link',
+          href: '#',
+          text: 'Подробнее',
+          cls: 'main-btn--outlined',
+        })

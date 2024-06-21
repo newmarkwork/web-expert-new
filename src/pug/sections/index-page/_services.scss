@@ -5,11 +5,15 @@
     @extend %list-reset;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+    grid-template-columns: 1fr;
     gap: var(--gap-lg);
 
-    &-item {
+    @include media-up(640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-up($desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

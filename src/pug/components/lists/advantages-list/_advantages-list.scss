@@ -20,7 +20,11 @@
     gap: var(--gap-sm);
     align-items: center;
     text-align: center;
-    padding: var(--gap-md);
+    padding: var(--gap-xl) var(--gap-md);
+
+    @extend %base-box-shadow;
+
+    border-radius: 20px;
 
     @include media-up($tablet-width) {
       width: calc(50% - var(--gap-sm));
