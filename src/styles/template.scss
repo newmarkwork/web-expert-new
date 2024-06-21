@@ -13,6 +13,7 @@
 @import '../pug/components/lists/advantages-list/advantages-list';
 @import '../pug/components/cards/review-card/review-card';
 @import '../pug/components/cards/service-preview-card/service-preview-card';
+@import '../pug/components/accordeons/main-accordeon/main-accordeon';
 @import '../pug/components/footer/footer';
 
 // sections
@@ -24,6 +25,7 @@
 @import '../pug/sections/index-page/support';
 @import '../pug/sections/index-page/advantages';
 @import '../pug/sections/index-page/reviews';
+@import '../pug/sections/index-page/faq';
 
 //  modals
 @import '../pug/modals/modal';

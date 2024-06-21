@@ -1,0 +1,25 @@
+.faq {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5vw;
+    align-items: center;
+
+    @include media-up($laptop-width) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-up($desktop-width) {
+      grid-template-columns: 4fr 7fr;
+    }
+  }
+
+  .base-title,
+  .base-text {
+    text-align: center;
+
+    @include media-up($laptop-width) {
+      text-align: left;
+    }
+  }
+}

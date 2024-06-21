@@ -1,0 +1,43 @@
+include ../../components/accordeons/main-accordeon/main-accordeon
+
+section.faq
+  .container
+    //- span(aria-hidden="true").faq__label.faq__label--top Ответ
+    //- span(aria-hidden="true").faq__label.faq__label--bottom Вопрос
+    .faq__side
+      h2.base-title Вопрос ответ
+      p.base-text !!!!!!Чтобы привлекать новых пользователей на сайт из таких поисковых систем, как Google и Яндекс, очень важно сначала оптимизировать контент. Один из эффективных способов привлечения трафика — SEO-текст.
+
+    .faq__content
+      +main-accordeon({
+        items: [
+          {
+            title: 'Что такое веб поддержка сайта?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Какие услуги входят в веб поддержку сайта?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Как выбрать надежного провайдера веб поддержки сайта?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Как часто нужно обновлять информацию на сайте?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Как часто нужно обновлять информацию на сайте?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Какие технологии используются для веб поддержки сайта?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+          {
+            title: 'Нужно ли обновлять дизайн сайта?',
+            text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+          },
+        ]
+      })

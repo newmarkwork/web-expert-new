@@ -1,7 +1,9 @@
 .header {
   padding: var(--gap-xs) 0;
+
   &__container {
     @extend %flex-wrap;
+
     align-items: center;
     gap: var(--gap-xs);
   }

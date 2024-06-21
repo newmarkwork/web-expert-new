@@ -1,0 +1,8 @@
+mixin main-accordeon(data)
+  .main-accordeon
+    each item in data.items
+      .main-accordeon__item
+        .main-accordeon__item-header.collapsed
+          span!= item.title
+        .main-accordeon__item-body
+          .main-accordeon__item-body-content!= item.text
