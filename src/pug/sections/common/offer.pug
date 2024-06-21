@@ -1,0 +1,54 @@
+include ../../components/controls/main-input/main-input
+include ../../components/controls/main-checkbox/main-checkbox
+include ../../components/controls/main-btn/main-btn
+
+section.offer
+  .container
+    h2.base-title Нужна профессиональная поддержка?
+
+    .offer-form
+      form(action="#" method="POST" enctype="multipart/form-data")
+        input(type="hidden" name="Заполненная форма:" value='Форма обратной связи')
+        input(type="hidden" name="recaptcha").g-recaptcha-response
+
+        .offer-form__wrapper
+          fieldset
+            +main-input({
+              type: 'text',
+              id: 'offer-form-user-name',
+              label: 'Имя*:',
+              placeholder: 'Иван Петров',
+            })
+            +main-input({
+              type: 'tel',
+              id: 'offer-form-user-phone',
+              label: 'Телефон*:',
+              placeholder: '+7 000 000 00 00',
+              dataType: 'phone'
+            })
+            +main-input({
+              type: 'text',
+              id: 'offer-form-user-link',
+              label: 'Ссылка на Ваш сайт:',
+              placeholder: 'www...',
+            })
+            +main-input({
+              type: 'file',
+              id: 'offer-form-user-file',
+              label: 'Файл с информацией о проекте:',
+              placeholder: 'Нет файла',
+            })
+            +main-btn({
+              type: 'submit',
+              text: 'Отправить',
+              iconName: 'envelope',
+              iconWidth: 18,
+              iconHeight: 18,
+              iconPosition: 'left'
+            })
+          +main-checkbox({
+            id: 'offer-form-user-accept',
+            label: 'Заполняя данную форму, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>'
+          })
+
+

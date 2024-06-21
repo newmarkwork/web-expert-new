@@ -1,0 +1,5 @@
+mixin main-input(data)
+  .main-input
+    if data.label
+      label(for= data.id)!= data.label
+      input(type= data.type id= data.id data-type= data.type ? data.type : null placeholder= data.placeholder ? data.placeholder : null)

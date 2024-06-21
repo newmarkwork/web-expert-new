@@ -1,0 +1,8 @@
+.offer {
+  @extend %section-offset;
+  @extend %section-accent-bg;
+
+  .base-title {
+    color: var(--white);
+  }
+}
