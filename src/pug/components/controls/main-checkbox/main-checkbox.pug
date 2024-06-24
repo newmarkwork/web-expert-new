@@ -1,4 +1,4 @@
 mixin main-checkbox(data)
-  .main-checkbox
+  .main-checkbox(class= data.class ? data.class : null)
     label!= data.label
       input(type="checkbox" id= data.id name= data.name)

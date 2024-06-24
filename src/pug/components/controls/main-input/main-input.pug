@@ -1,5 +1,13 @@
 mixin main-input(data)
   .main-input
-    if data.label
+    if data.type == 'file'
       label(for= data.id)!= data.label
-      input(type= data.type id= data.id data-type= data.type ? data.type : null placeholder= data.placeholder ? data.placeholder : null)
+      label(for= data.id).file-attach-fake-control
+        svg(width="21" height="21")
+          use(xlink:href="./assets/svg-sprite.svg#icon-attach")
+        span Нет файла
+      input(type="file" id= data.id name="Файл")
+    else
+      if data.label
+        label(for= data.id)!= data.label
+      input(type= data.type id= data.id placeholder= data.placeholder ? data.placeholder : null)

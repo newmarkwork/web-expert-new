@@ -35,7 +35,8 @@
   &__offer-btn {
     width: 100%;
     max-width: 320px;
-    background-color: var(--secondary);
+
+    // background-color: var(--secondary);
 
     @include media-up(420px) {
       max-width: 250px;

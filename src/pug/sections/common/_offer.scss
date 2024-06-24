@@ -5,4 +5,99 @@
   .base-title {
     color: var(--white);
   }
+
+  &-form {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    &__wrapper {
+      @extend %flex-column;
+
+      align-items: center;
+      gap: var(--gap-lg);
+
+      .offer-form-user-accept {
+        color: var(--white);
+
+        a {
+          text-decoration: underline;
+          color: var(--warning);
+        }
+      }
+    }
+
+    fieldset {
+      @extend %fieldset-reset;
+
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-md);
+      align-items: flex-end;
+      padding: clamp(var(--gap-xl), 5vw, var(--gap-xxxl))
+        clamp(var(--gap-lg), 5vw, var(--gap-xxl));
+      border: 1px solid #9e00ff;
+      box-shadow: -48px 60px 100px rgb(0 0 0 / 15%);
+      border-radius: 40px;
+      width: 100%;
+
+      & > * {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .main-btn {
+        background-color: var(--secondary);
+        width: 100%;
+        min-height: 45px;
+      }
+
+      @include media-up($mobile-width) {
+        flex-flow: row wrap;
+        gap: var(--gap-lg);
+
+        & > * {
+          width: calc(50% - calc(var(--gap-lg) / 2));
+        }
+
+        .main-btn {
+          max-width: 260px;
+          margin: 0 auto;
+          margin-top: var(--gap-lg);
+        }
+      }
+
+      @include media-up(1100px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--gap-xl);
+
+        & > * {
+          width: 100%;
+        }
+
+        .main-btn {
+          margin: 0;
+        }
+      }
+    }
+
+    .main-checkbox {
+      font-size: 14px;
+      max-width: 410px;
+
+      label {
+        text-wrap: initial;
+      }
+
+      @include media-up($tablet-lg-width) {
+        font-size: 16px;
+        max-width: 80dvw;
+
+        label {
+          text-wrap: balance;
+        }
+      }
+    }
+  }
 }

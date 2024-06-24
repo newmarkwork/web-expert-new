@@ -953,7 +953,7 @@
           </div>
         </div>
       </section>
-      <section class="offer">
+      <section class="offer grid-section">
         <div class="container">
           <h2 class="base-title">
             Нужна профессиональная поддержка?
@@ -983,7 +983,6 @@
                     <input
                       type="text"
                       id="offer-form-user-name"
-                      data-type="text"
                       placeholder="Иван Петров"
                     >
                   </div>
@@ -994,7 +993,6 @@
                     <input
                       type="tel"
                       id="offer-form-user-phone"
-                      data-type="tel"
                       placeholder="+7 000 000 00 00"
                     >
                   </div>
@@ -1005,7 +1003,6 @@
                     <input
                       type="text"
                       id="offer-form-user-link"
-                      data-type="text"
                       placeholder="www..."
                     >
                   </div>
@@ -1013,11 +1010,25 @@
                     <label for="offer-form-user-file">
                       Файл с информацией о проекте:
                     </label>
+                    <label
+                      class="file-attach-fake-control"
+                      for="offer-form-user-file"
+                    >
+                      <svg
+                        width="21"
+                        height="21"
+                      >
+                        <use xlink:href="./assets/svg-sprite.svg#icon-attach">
+                        </use>
+                      </svg>
+                      <span>
+                        Нет файла
+                      </span>
+                    </label>
                     <input
                       type="file"
                       id="offer-form-user-file"
-                      data-type="file"
-                      placeholder="Нет файла"
+                      name="Файл"
                     >
                   </div>
                   <button
@@ -1025,8 +1036,8 @@
                     type="submit"
                   >
                     <svg
-                      width="18"
-                      height="18"
+                      width="20"
+                      height="20"
                     >
                       <use xlink:href="./assets/svg-sprite.svg#icon-envelope">
                       </use>
@@ -1036,7 +1047,7 @@
                     </span>
                   </button>
                 </fieldset>
-                <div class="main-checkbox">
+                <div class="main-checkbox offer-form-user-accept">
                   <label>
                     Заполняя данную форму, я даю согласие на
                     <a

@@ -24,10 +24,18 @@ $gap: var(--gap-xs);
   background-color: $background-color;
   box-shadow: $box-shadow;
   gap: $gap;
+
+  svg {
+    fill: var(--white);
+  }
 }
 
 .main-btn--outlined {
   border-color: $background-color;
   color: $background-color;
   background-color: transparent;
+
+  svg {
+    fill: var(--primary);
+  }
 }

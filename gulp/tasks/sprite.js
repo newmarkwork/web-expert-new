@@ -20,7 +20,7 @@ export const sprite = (done) => {
           $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
         },
-        parserOptions: { xmlMode: true },
+        parserOptions: { xmlMode: false },
       })
     )
     // sometimes cheerio plugin create unnecessary string '&gt;', so replace it.

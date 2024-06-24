@@ -1,2 +1,60 @@
+$main-input-label-color: var(--white);
+$main-input-bg-color: var(--white);
+$main-input-color: var(--black);
+$main-input-placeholder-color: #a8a8a8;
+$main-input-padding: var(--gap-sm) var(--gap-md);
+$main-input-border: 1px solid;
+$main-input-border-color: var(--white);
+$main-input-border-radius: 10px;
+
 .main-input {
+  @extend %flex-column;
+
+  label {
+    font-size: 16px;
+    font-weight: 300;
+    color: $main-input-label-color;
+    margin-bottom: var(--gap-xs);
+  }
+
+  .file-attach-fake-control,
+  input[type='text'],
+  input[type='tel'] {
+    padding: $main-input-padding;
+    border: $main-input-border;
+    border-color: $main-input-border-color;
+    border-radius: $main-input-border-radius;
+    background-color: $main-input-bg-color;
+    color: $main-input-color;
+    min-height: 45px;
+
+    &::placeholder {
+      color: $main-input-placeholder-color;
+    }
+  }
+
+  .file-attach-fake-control {
+    & + input {
+      display: none;
+    }
+
+    svg {
+      width: 21px;
+      height: 21px;
+      min-width: 21px;
+      fill: #a8a8a8;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    padding: var(--gap-xs) var(--gap-md);
+    margin-bottom: 0;
+
+    span {
+      @include text-truncate(1);
+
+      color: $main-input-placeholder-color;
+    }
+  }
 }

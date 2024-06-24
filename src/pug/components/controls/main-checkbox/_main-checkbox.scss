@@ -1,2 +1,31 @@
 .main-checkbox {
+  display: flex;
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    &:has(input[type='checkbox']:checked)::before {
+      background-image: url('../assets/images/icon-check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 12px;
+    }
+  }
 }
