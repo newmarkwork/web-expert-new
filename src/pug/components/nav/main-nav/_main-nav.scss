@@ -1,0 +1,29 @@
+.main-nav {
+  &__list {
+    &-item {
+      a {
+        transition:
+          opacity var(--base-transition),
+          text-shadow var(--base-transition);
+
+        @media (hover: hover) {
+          &:hover {
+            text-shadow:
+              0 2px 20px #cea8ed,
+              0 0 1em var(--primary);
+          }
+        }
+
+        &:focus {
+          text-shadow:
+            0 2px 20px #cea8ed,
+            0 0 1em var(--primary);
+        }
+
+        &:active {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

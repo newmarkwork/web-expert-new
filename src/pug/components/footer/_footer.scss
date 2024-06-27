@@ -1,3 +1,157 @@
 .footer {
-  background-color: white;
+  position: relative;
+  padding: var(--gap-xxl) 0;
+
+  &__container {
+    @extend %flex-column;
+
+    align-items: center;
+    gap: var(--gap-lg) 0;
+
+    @include media-up($tablet-lg-width) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  .contact-block {
+    order: 1;
+
+    @include media-up($tablet-lg-width) {
+      order: initial;
+
+      a:first-child {
+        font-size: 18px;
+      }
+
+      a:last-child {
+        font-size: 14px;
+      }
+    }
+
+    @include media-up($laptop-width) {
+      a:first-child {
+        font-size: clamp(18px, 2.4vw, 24px);
+      }
+    }
+
+    @include media-up($desktop-width) {
+      a:last-child {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .main-nav {
+    flex-grow: 1;
+    padding: 0 clamp(var(--gap-sm), 3vw, var(--gap-xl));
+    order: 2;
+
+    @include media-up($tablet-lg-width) {
+      order: initial;
+    }
+
+    .main-nav__list {
+      @extend %list-reset;
+      @extend %flex-column;
+
+      align-items: center;
+
+      @include media-up($tablet-lg-width) {
+        margin-bottom: calc(-1 * var(--gap-xs));
+      }
+
+      &-item {
+        a {
+          @extend %flex-center;
+
+          font-size: 14px;
+          padding: var(--gap-xs);
+
+          @include media-up($desktop-width) {
+            font-size: 16px;
+          }
+        }
+
+        @include media-up($tablet-lg-width) {
+          margin: 0 auto;
+        }
+      }
+
+      @include media-up($mobile-width) {
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__company {
+    @extend %flex-column;
+
+    gap: var(--gap-md) 0;
+    align-items: center;
+    order: 3;
+
+    @include media-up($tablet-lg-width) {
+      order: initial;
+      max-width: 270px;
+      gap: var(--gap-xs);
+    }
+
+    @include media-up(1280px) {
+      display: grid;
+      grid-template-columns: 195px auto;
+      max-width: 100%;
+      gap: var(--gap-xs) var(--gap-lg);
+    }
+
+    .main-logo {
+      max-width: 195px;
+      order: 2;
+
+      @include media-up($tablet-lg-width) {
+        order: initial;
+        max-width: 100%;
+      }
+
+      @include media-up(1280px) {
+        grid-column: 1/3;
+        max-width: 195px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &-rights {
+      font-size: 14px;
+      color: var(--info);
+      order: 2;
+
+      @include media-up($tablet-lg-width) {
+        order: initial;
+        align-self: end;
+        font-size: 12px;
+      }
+
+      @include media-up(1280px) {
+        text-align: right;
+      }
+    }
+
+    &-policy {
+      font-size: 14px;
+      color: var(--info);
+      order: 1;
+
+      @include media-up($tablet-lg-width) {
+        order: initial;
+      }
+
+      @include media-up($desktop-width) {
+        font-size: 16px;
+      }
+    }
+  }
 }

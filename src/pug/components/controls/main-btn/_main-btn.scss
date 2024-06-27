@@ -10,7 +10,7 @@ $gap: var(--gap-xs);
 %main-btn,
 .main-btn {
   @extend %btn-reset;
-  @extend %flex-centered-content;
+  @extend %flex-center;
 
   width: fit-content;
   min-width: 50px;

@@ -3,17 +3,17 @@ include ../../controls/main-btn/main-btn
 mixin service-preview-card(data)
   .service-preview-card
     .service-preview-card__header
-      small Поддержка
-      span!= data.type
+      small!= data.label
+      span!= data.title
     .service-preview-card__content
       .service-preview-card__content-section
         p!= data.text
 
-      .service-preview-card__content-section
-        span.service-preview-card__content-section-title Специалисты:
-        ul.service-preview-card__stuff-list
-          each person in data.stuff
-            li.service-preview-card__stuff-list-item!= person
+      //- .service-preview-card__content-section
+      //-   span.service-preview-card__content-section-title Специалисты:
+      //-   ul.service-preview-card__stuff-list
+      //-     each person in data.stuff
+      //-       li.service-preview-card__stuff-list-item!= person
     .service-preview-card__footer
       span.service-preview-card__price!= data.cost
 

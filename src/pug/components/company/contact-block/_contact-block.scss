@@ -1,0 +1,22 @@
+.contact-block {
+  @extend %flex-column;
+
+  align-items: center;
+
+  a {
+    font-weight: 400;
+
+    &:first-child {
+      font-size: clamp(18px, 2.4vw, 24px);
+    }
+
+    &:last-child {
+      font-size: clamp(14px, 1.8vw, 16px);
+      color: var(--primary);
+    }
+  }
+
+  @include media-up($laptop-width) {
+    align-items: flex-end;
+  }
+}

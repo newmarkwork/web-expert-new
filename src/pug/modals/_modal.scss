@@ -38,7 +38,7 @@
     right: 10px;
 
     @extend %btn-reset;
-    @extend %flex-centered-content;
+    @extend %flex-center;
 
     width: fit-content;
     height: fit-content;

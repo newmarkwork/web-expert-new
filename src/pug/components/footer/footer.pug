@@ -1,1 +1,38 @@
 footer.footer
+  .container.footer__container
+    .footer__company
+      include ../company/logos/main-logo/main-logo
+      span.footer__company-rights © 2024 WEB-EXPERT
+      a(href="#").footer__company-policy Политика конфиденциальности
+
+    nav.main-nav
+      <ul class="main-nav__list">
+        <li class="main-nav__list-item">
+          <a href="#">
+            <span>О компании</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="service-detail.html">
+            <span>Услуги</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+
+          <a href="#">
+            <span>Акции</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="#">
+            <span>Блог</span>
+          </a>
+        </li>
+        <li class="main-nav__list-item">
+          <a href="#">
+            <span>Контакты</span>
+          </a>
+        </li>
+      </ul>
+
+    include ../company/contact-block/contact-block
