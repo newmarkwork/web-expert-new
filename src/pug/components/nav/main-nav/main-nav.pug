@@ -1,22 +1,31 @@
 .main-nav
-  ul.main-nav__list
-    li.main-nav__list-item
-      a(href="#") О компании
-    li.main-nav__list-item.main-nav__list-item--nested
-      a(href="#") Услуги
-      ul
-        li
-          a(href="#") Seo продвижение сайтов
-        li
-          a(href="#") Создание и разработка сайтов
-        li
-          a(href="#") Контекст
-        li
-          a(href="#") Техническая поддержка
-    li.main-nav__list-item
-      a(href="#") Акции
-    li.main-nav__list-item
-      a(href="#") Блог
-    li.main-nav__list-item
-      a(href="#") Контакты
+  .main-nav__wrapper
+    button(type="button").nav-closer
+      svg(width="20" height="20")
+        use(xlink:href="./assets/svg-sprite.svg#icon-close")
+    ul.main-nav__list
+      li.main-nav__list-item
+        a(href="#") О компании
+      li.main-nav__list-item.main-nav__list-item--nested
+        a(href="#") Услуги
+        button(type="button").nested-list-opener
+          svg(width="17" height="10")
+            use(xlink:href="./assets/svg-sprite.svg#icon-arrow")
+        ul
+          li
+            a(href="#") Seo продвижение сайтов
+          li
+            a(href="#") Создание и разработка сайтов
+          li
+            a(href="#") Контекст
+          li
+            a(href="#") Техническая поддержка
+      li.main-nav__list-item
+        a(href="#") Акции
+      li.main-nav__list-item
+        a(href="#") Блог
+      li.main-nav__list-item
+        a(href="#") Контакты
+
+    include ../../company/contact-block/contact-block
 

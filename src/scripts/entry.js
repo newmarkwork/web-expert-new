@@ -5,3 +5,5 @@ import '../pug/components/accordeons/main-accordeon/main-accordeon';
 import './modules/input-number-mask';
 import './modules/gsap/faq-text-line';
 import './modules/file-chooser';
+import './modules/nav';
+import './modules/nested-list-opener';
