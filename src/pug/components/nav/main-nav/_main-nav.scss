@@ -1,28 +1,98 @@
 .main-nav {
+  flex-grow: 1;
+
   &__list {
+    @extend %list-reset;
+    @extend %flex-align;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 var(--gap-lg);
+    flex-grow: 1;
+
     &-item {
       a {
+        @extend %flex-align;
+
+        padding: var(--gap-xs);
         transition:
           opacity var(--base-transition),
           text-shadow var(--base-transition);
+      }
 
-        @media (hover: hover) {
-          &:hover {
-            text-shadow:
-              0 2px 20px #cea8ed,
-              0 0 1em var(--primary);
+      &--nested {
+        position: relative;
+
+        & > a {
+          padding-right: 20px;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-top: 2px solid var(--black);
+            border-right: 2px solid var(--black);
+            transform: translateY(-50%) rotate(135deg);
+            transform-origin: center;
           }
         }
 
-        &:focus {
+        ul {
+          @extend %list-reset;
+          @extend %flex-column;
+
+          visibility: hidden;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: fit-content;
+          padding: 20px;
+          box-shadow: 0 40px 40px rgba(0 0 0 / 25%);
+          background-color: var(--white);
+          z-index: -1;
+          border-radius: 8px;
+          border-bottom: 8px solid var(--primary);
+          opacity: 0;
+          transition: opacity var(--base-transition);
+
+          li a {
+            white-space: nowrap;
+          }
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover > a {
           text-shadow:
             0 2px 20px #cea8ed,
             0 0 1em var(--primary);
         }
 
-        &:active {
-          opacity: 0.6;
+        &:hover > ul {
+          visibility: visible;
+          opacity: 1;
+          z-index: 10;
         }
+      }
+
+      &:focus > a {
+        text-shadow:
+          0 2px 20px #cea8ed,
+          0 0 1em var(--primary);
+      }
+
+      &:focus > ul {
+        visibility: visible;
+        opacity: 1;
+        z-index: 10;
+      }
+
+      &:active > a {
+        opacity: 0.6;
       }
     }
   }

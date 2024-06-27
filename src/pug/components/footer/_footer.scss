@@ -52,7 +52,6 @@
     }
 
     .main-nav__list {
-      @extend %list-reset;
       @extend %flex-column;
 
       align-items: center;

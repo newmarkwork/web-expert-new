@@ -4,7 +4,9 @@ header.header
   .container.header__container
     include ../company/logos/main-logo/main-logo
 
-    .header__contacts
+    include ../nav/main-nav/main-nav
+
+    include ../company/contact-block/contact-block
 
     +main-btn({
       type: 'button',
@@ -15,3 +17,5 @@ header.header
       iconHeight: 18,
       iconPosition: 'left'
     })
+
+    include ../burger/burger

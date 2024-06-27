@@ -1,0 +1,23 @@
+.burger {
+  @extend %btn-reset;
+  @extend %flex-center;
+
+  flex-direction: column;
+  gap: var(--gap-xxs);
+  border-radius: 50%;
+  background-color: var(--primary);
+  min-width: 40px;
+  min-height: 40px;
+
+  @include media-up($mobile-width) {
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  &__line {
+    width: 20px;
+    height: 2px;
+    background-color: var(--white);
+    border-radius: 2px;
+  }
+}
