@@ -9,3 +9,4 @@ import './modules/nav';
 import './modules/nested-list-opener';
 import './modules/modals';
 import './modules/form-submit';
+import './modules/stuff-card';

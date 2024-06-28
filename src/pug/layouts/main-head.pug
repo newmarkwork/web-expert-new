@@ -1,6 +1,7 @@
 - let isProd = process.argv.includes('build');
 
 mixin main-head(title, descriprion, keywords, styleFileNames)
+  - console.log(title, description)
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")

@@ -1,0 +1,59 @@
+include ../../components/cards/service-preview-card/service-preview-card
+
+section.section-top
+  .container
+    h1.main-title Наши услуги
+    p.main-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate deserunt laudantium blanditiis harum laborum fugiat neque tempora tempore ducimus voluptatibus, maiores obcaecati quasi officia? Id impedit itaque ut qui!
+
+section.base-section
+  .container
+    ul
+      li
+        +service-preview-card({
+          label: 'Seo продвижение сайтов',
+          title: 'Продвижение',
+          text: 'Включает в себя обновление содержимого сайта, поддержку пользователей и базовую оптимизацию для поисковых систем',
+          cost: '35 000 руб.'
+        })
+
+      li
+        +service-preview-card({
+          label: 'Создание и разработка сайтов',
+          title: 'Разработка сайта',
+          text: 'Включает все опции базового тарифа, а также дополнительные услуги, такие как анализ конкурентов, улучшение дизайна и юзабилити сайта',
+          cost: '55 000 руб.'
+        })
+
+      li
+        +service-preview-card({
+          label: 'Контекст',
+          title: 'Реклама в яндекс',
+          text: 'Включает в себя все опции стандартного тарифа, а также индивидуальную разработку стратегии продвижения сайта и работу с контекстом в интернете',
+          cost: '70 000 руб.'
+        })
+
+      li
+        +service-preview-card({
+          label: 'Техническая поддержка',
+          title: 'Аудит сайта',
+          text: 'Включает в себя полный комплекс услуг по веб-поддержке, включая разработку и продвижение новых проектов, а также мониторинг и оптимизацию уже существующих ресурсов',
+          cost: '90 000 руб.'
+        })
+
+      li
+        +service-preview-card({
+          label: 'Контекст',
+          title: 'Реклама в яндекс',
+          text: 'Включает в себя все опции стандартного тарифа, а также индивидуальную разработку стратегии продвижения сайта и работу с контекстом в интернете',
+          cost: '70 000 руб.'
+        })
+
+      li
+        +service-preview-card({
+          label: 'Техническая поддержка',
+          title: 'Аудит сайта',
+          text: 'Включает в себя полный комплекс услуг по веб-поддержке, включая разработку и продвижение новых проектов, а также мониторинг и оптимизацию уже существующих ресурсов',
+          cost: '90 000 руб.'
+        })
+
+include ../../sections/common/offer

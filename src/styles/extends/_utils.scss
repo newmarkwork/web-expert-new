@@ -6,12 +6,28 @@
   margin-top: calc(-1 * var(--gap-m));
 }
 
+%base-list-grid {
+  @extend %list-reset;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-lg);
+
+  @include media-up(640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-up(1240px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 %section-accent-bg {
   background-color: var(--primary);
 }
 
 %section-offset {
-  padding: clamp(var(--gap-xxl), 6vw, var(--gap-xxxl)) 0;
+  padding: clamp(var(--gap-xl), 6vw, var(--gap-xxxl)) 0;
 }
 
 %shaker {

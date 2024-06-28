@@ -1,0 +1,106 @@
+include ../../components/controls/main-btn/main-btn
+include ../../components/cards/service-preview-card/service-preview-card
+include ../../components/accordeons/main-accordeon/main-accordeon
+include ../../components/cards/stuff-card/stuff-card
+
+section.section-top
+  .container
+    h1.main-title Создание и разработка сайтов
+    p.main-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate deserunt laudantium blanditiis harum laborum fugiat neque tempora tempore ducimus voluptatibus, maiores obcaecati quasi officia? Id impedit itaque ut qui!
+
+    span.price-row от 35&nbsp;000 рублей
+
+    +main-btn({
+      type: 'button',
+      text: 'Оставить заявку',
+      iconName: 'envelope',
+      iconWidth: 20,
+      iconHeight: 20,
+      iconPosition: 'left',
+      modal: 'offer-modal'
+    })
+
+section.service-detail
+  .container
+    h2.base-title Что входит ?
+
+    +main-accordeon({
+      items: [
+        {
+          title: 'Анализ и аудит сайта',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Исследование и анализ ключевых слов',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Создание и оптимизация контента',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Улучшение структуры и навигации сайта',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Оптимизация технических параметров сайта',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Внешняя оптимизация',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Мониторинг и анализ результатов',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        },
+        {
+          title: 'Ежемесячный отчет',
+          text: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempora doloribus dignissimos, exercitationem minus dolorum fugiat magnam aliquid dicta corrupti ex quaerat beatae quae dolorem atque excepturi nihil nemo at!</p>'
+        }
+      ]
+    })
+
+section.service-detail
+  .container
+    h2.base-title Что Вы получаете?
+    ul.service-stuff__list
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'SEO-специалист',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'Копирайтер',
+          text: 'С обширным профессиональным опытом написания текстов различного характера и сложности, владеющий навыками исследования темы, сбора и анализа информации, создания уникального и качественного контента.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'SEO-специалист',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'Копирайтер',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'SEO-специалист',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'Копирайтер',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+      li.service-stuff__list-item
+        +service-stuff-card({
+          title: 'SEO-специалист',
+          text: 'С богатым опытом успешной оптимизации сайтов для повышения их рейтинга в поисковых системах и привлечения целевого трафика. Владеющий глубокими знаниями в области SEO, интернет-маркетинга и аналитики.'
+        })
+
+    p.base-text SEO-оптимизация и качественный копирайтинг позволяют привлечь внимание целевой аудитории, увеличить посещаемость сайта и продажи, улучшить позиции сайта в результатах поиска и укрепить репутацию компании на рынке.
+
+include ../../sections/common/offer

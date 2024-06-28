@@ -1,0 +1,15 @@
+.service-detail {
+  @extend %section-offset;
+
+  background-color: #f0f0f0;
+
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+
+  .main-accordeon {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

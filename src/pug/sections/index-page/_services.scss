@@ -2,18 +2,6 @@
   @extend %section-offset;
 
   &__list {
-    @extend %list-reset;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--gap-lg);
-
-    @include media-up(640px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include media-up(1240px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    @extend %base-list-grid;
   }
 }
