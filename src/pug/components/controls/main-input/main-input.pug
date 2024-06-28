@@ -6,8 +6,8 @@ mixin main-input(data)
         svg(width="21" height="21")
           use(xlink:href="./assets/svg-sprite.svg#icon-attach")
         span Нет файла
-      input(type="file" id= data.id name="Файл")
+      input(type="file" id= data.id name="Файл" data-required= data.required ? data.required : null)
     else
       if data.label
         label(for= data.id)!= data.label
-      input(type= data.type id= data.id placeholder= data.placeholder ? data.placeholder : null)
+      input(type= data.type id= data.id placeholder= data.placeholder ? data.placeholder : null data-required= data.required ? data.required : null)

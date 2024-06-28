@@ -17,8 +17,9 @@
       content: '';
       width: 16px;
       height: 16px;
-      background-color: white;
+      background-color: var(--white);
       border-radius: 2px;
+      border: 1px solid transparent;
     }
 
     &:has(input[type='checkbox']:checked)::before {
@@ -26,6 +27,14 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: 12px;
+    }
+
+    &:has(.invalid-control) {
+      color: var(--danger);
+
+      &::before {
+        border-color: var(--danger) !important;
+      }
     }
   }
 }

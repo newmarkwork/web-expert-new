@@ -7,3 +7,5 @@ import './modules/gsap/faq-text-line';
 import './modules/file-chooser';
 import './modules/nav';
 import './modules/nested-list-opener';
+import './modules/modals';
+import './modules/form-submit';

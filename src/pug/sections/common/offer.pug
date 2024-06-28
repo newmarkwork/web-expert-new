@@ -18,12 +18,14 @@ section.offer.grid-section
               id: 'offer-form-user-name',
               label: 'Имя*:',
               placeholder: 'Иван Петров',
+              required: 'true'
             })
             +main-input({
               type: 'tel',
               id: 'offer-form-user-phone',
               label: 'Телефон*:',
               placeholder: '+7 000 000 00 00',
+              required: 'true'
             })
             +main-input({
               type: 'text',
@@ -48,7 +50,8 @@ section.offer.grid-section
           +main-checkbox({
             id: 'offer-form-user-accept',
             class: 'offer-form-user-accept',
-            label: 'Заполняя данную форму, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>'
+            label: 'Заполняя данную форму, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>',
+            required: 'true'
           })
 
 

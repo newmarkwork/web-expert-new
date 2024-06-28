@@ -1,0 +1,43 @@
+extends ../layouts/modals/main-modal
+include ../components/forms/main-form
+
+block variables
+  - modalId = "callback-modal"
+  - modalClasses = "callback-modal"
+
+block modalHeader
+  span.modal-title Заказ обратного звонка
+  span.modal-text Оставьте свои данные и мы Вам перезвоним
+
+block modalContent
+  +main-form({
+    name: 'Заказ обратного звонка',
+
+    groups: [
+      [
+        {
+          type: 'text',
+          id: 'callback-modal-form-user-name',
+          label: 'Имя*',
+          placeholder: 'Иван Петров',
+          required: 'true'
+        },
+        {
+          type: 'tel',
+          id: 'callback-modal-form-user-phone',
+          label: 'Телефон*',
+          placeholder: '+7 000 000 00 00',
+          required: 'true'
+        },
+      ]
+    ],
+
+    accept: {
+      id: 'callback-modal-form-user-accept'
+    }
+  })
+
+
+
+
+

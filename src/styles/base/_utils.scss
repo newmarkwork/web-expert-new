@@ -3,3 +3,13 @@
 
   gap: var(--gap-m);
 }
+
+input:not(input[type='checkbox']).invalid-control,
+input:not(input[type='checkbox']).invalid-control::placeholder {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.shaker {
+  @extend %shaker;
+}

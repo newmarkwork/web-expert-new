@@ -1,0 +1,43 @@
+include ../controls/main-input/main-input
+include ../controls/main-checkbox/main-checkbox
+include ../controls/main-btn/main-btn
+
+mixin main-form(data)
+  .main-form
+    form(action="#" method="POST" enctype="multipart/form-data")
+      input(type="hidden" name="Заполненная форма:" value= data.name)
+      input(type="hidden" name="recaptcha").g-recaptcha-response
+
+      each group in data.groups
+        fieldset
+          each control in group
+            if control.type == 'text' || control.type == 'tel'
+              +main-input({
+                type: control.type,
+                id: control.id,
+                label: control.label,
+                placeholder: control.placeholder,
+                required: control.required
+              })
+
+            if control.type == 'file'
+              +main-input({
+                type: 'file',
+                id: control.id,
+                label: control.label,
+                placeholder: control.placeholder,
+              })
+      +main-btn({
+        type: 'submit',
+        text: 'Отправить',
+        iconName: 'envelope',
+        iconWidth: 20,
+        iconHeight: 20,
+        iconPosition: 'left',
+      })
+      +main-checkbox({
+        id: data.accept.id,
+        class: 'main-form-accept',
+        label: 'Заполняя данную форму, я даю согласие на <a href="#" target="_blank">обработку персональных данных</a>',
+        required: 'true'
+      })

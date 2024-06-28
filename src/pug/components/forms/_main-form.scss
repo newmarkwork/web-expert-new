@@ -1,0 +1,59 @@
+.main-form {
+  .main-input {
+    label {
+      font-size: 14px;
+      color: var(--black);
+
+      @include media-up(640px) {
+        font-size: 16px;
+      }
+    }
+
+    input {
+      border-color: #a8a8a8;
+    }
+  }
+
+  .main-input .file-attach-fake-control {
+    border-color: #a8a8a8;
+  }
+
+  .main-checkbox label::before {
+    border: 1px solid #a8a8a8;
+  }
+
+  .main-form-accept {
+    font-size: 14px;
+    padding-top: var(--gap-md);
+    color: var(--black);
+
+    a {
+      text-decoration: underline;
+      color: var(--primary);
+    }
+  }
+
+  *[type='submit'] {
+    width: 100%;
+    max-width: 300px;
+
+    @include media-up(640px) {
+      max-width: calc(50% - var(--gap-xs));
+    }
+  }
+
+  fieldset {
+    @extend %fieldset-reset;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap-sm);
+    align-items: flex-end;
+    margin-bottom: var(--gap-lg);
+
+    @include media-up(640px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap-md);
+    }
+  }
+}

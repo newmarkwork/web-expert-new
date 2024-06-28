@@ -8,12 +8,6 @@ mixin service-preview-card(data)
     .service-preview-card__content
       .service-preview-card__content-section
         p!= data.text
-
-      //- .service-preview-card__content-section
-      //-   span.service-preview-card__content-section-title Специалисты:
-      //-   ul.service-preview-card__stuff-list
-      //-     each person in data.stuff
-      //-       li.service-preview-card__stuff-list-item!= person
     .service-preview-card__footer
       span.service-preview-card__price!= data.cost
 
@@ -25,6 +19,7 @@ mixin service-preview-card(data)
           iconWidth: 20,
           iconHeight: 20,
           iconPosition: 'left',
+          modal: 'offer-modal'
         })
 
         +main-btn({

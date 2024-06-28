@@ -25,6 +25,7 @@ export const formValidation = (form) => {
     field.addEventListener('change', () => {
       setValidStatus(field);
     });
+
     if (field['type'] === 'text') {
       if (field.value.trim().length < 2) {
         setInvalidStatus(field);
@@ -33,6 +34,13 @@ export const formValidation = (form) => {
       }
     } else if (field['type'] === 'tel') {
       if (field.value.trim().length < 21) {
+        setInvalidStatus(field);
+      } else {
+        setValidStatus(field);
+      }
+    } else if (field['type'] === 'checkbox') {
+      console.log(field);
+      if (!field.checked) {
         setInvalidStatus(field);
       } else {
         setValidStatus(field);

@@ -1,0 +1,53 @@
+extends ../layouts/modals/main-modal
+include ../components/forms/main-form
+
+block variables
+  - modalId = "offer-modal"
+  - modalClasses = "offer-modal"
+
+block modalHeader
+  span.modal-title Оставить заявку
+  span.modal-text Оставьте свои данные и мы Вам перезвоним
+block modalContent
+  +main-form({
+    name: 'Оставить заявку',
+
+    groups: [
+      [
+        {
+          type: 'text',
+          id: 'offer-modal-form-user-name',
+          label: 'Имя*',
+          placeholder: 'Иван Петров',
+          required: 'true'
+        },
+        {
+          type: 'tel',
+          id: 'offer-modal-form-user-phone',
+          label: 'Телефон*',
+          placeholder: '+7 000 000 00 00',
+          required: 'true'
+        },
+        {
+          type: 'text',
+          id: 'offer-modal-form-user-link',
+          label: 'Ссылка на Ваш сайт:',
+          placeholder: 'www...'
+        },
+        {
+          type: 'file',
+          id: 'offer-modal-form-user-file',
+          label: 'Файл с информацией о проекте:',
+          placeholder: 'Нет файла'
+        },
+      ]
+    ],
+    accept: {
+      id: 'offer-modal-form-user-accept'
+    }
+  })
+
+
+
+
+

@@ -175,6 +175,7 @@
         <button
           class="header__offer-btn main-btn"
           type="button"
+          data-modal-opener="callback-modal"
         >
           <svg
             width="18"
@@ -213,6 +214,7 @@
             <button
               class="hero__offer-btn main-btn"
               type="button"
+              data-modal-opener="offer-modal"
             >
               <svg
                 width="20"
@@ -382,6 +384,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -431,6 +434,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -480,6 +484,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -529,6 +534,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -578,6 +584,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -627,6 +634,7 @@
                     <button
                       class="main-btn"
                       type="button"
+                      data-modal-opener="offer-modal"
                     >
                       <svg
                         width="20"
@@ -668,6 +676,7 @@
           <button
             class="main-btn"
             type="button"
+            data-modal-opener="offer-modal"
           >
             <svg
               width="20"
@@ -916,23 +925,26 @@
             class="modal main-modal review-modal"
             id="review-modal"
           >
-            <button
-              class="modal-closer"
-              type="button"
-              aria-label="Закрыть"
-            >
-              <svg
-                width="20"
-                height="20"
+            <div class="modal-wrapper">
+              <button
+                class="modal-closer"
+                type="button"
+                aria-label="Закрыть"
               >
-                <use xlink:href="./assets/svg-sprite.svg#icon-close">
-                </use>
-              </svg>
-            </button>
-            <div class="modal-content">
-              <span class="modal-text">
-                test
-              </span>
+                <svg
+                  width="20"
+                  height="20"
+                >
+                  <use xlink:href="./assets/svg-sprite.svg#icon-close">
+                  </use>
+                </svg>
+              </button>
+              <div class="modal-header">
+              </div>
+              <div class="modal-content">
+                <span class="modal-text">
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1103,6 +1115,7 @@
                       type="text"
                       id="offer-form-user-name"
                       placeholder="Иван Петров"
+                      data-required="true"
                     >
                   </div>
                   <div class="main-input">
@@ -1113,6 +1126,7 @@
                       type="tel"
                       id="offer-form-user-phone"
                       placeholder="+7 000 000 00 00"
+                      data-required="true"
                     >
                   </div>
                   <div class="main-input">
@@ -1178,6 +1192,7 @@
                     <input
                       type="checkbox"
                       id="offer-form-user-accept"
+                      data-required="true"
                     >
                   </label>
                 </div>
@@ -1262,29 +1277,278 @@
     </footer>
     <div class="modal-overlay">
       <div
+        class="modal main-modal callback-modal"
+        id="callback-modal"
+      >
+        <div class="modal-wrapper">
+          <button
+            class="modal-closer"
+            type="button"
+            aria-label="Закрыть"
+          >
+            <svg
+              width="20"
+              height="20"
+            >
+              <use xlink:href="./assets/svg-sprite.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <div class="modal-header">
+            <span class="modal-title">
+              Заказ обратного звонка
+            </span>
+            <span class="modal-text">
+              Оставьте свои данные и мы Вам перезвоним
+            </span>
+          </div>
+          <div class="modal-content">
+            <div class="main-form">
+              <form
+                action="#"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <input
+                  type="hidden"
+                  name="Заполненная форма:"
+                  value="Заказ обратного звонка"
+                >
+                <input
+                  class="g-recaptcha-response"
+                  type="hidden"
+                  name="recaptcha"
+                >
+                <fieldset>
+                  <div class="main-input">
+                    <label for="callback-modal-form-user-name">
+                      Имя*
+                    </label>
+                    <input
+                      type="text"
+                      id="callback-modal-form-user-name"
+                      placeholder="Иван Петров"
+                      data-required="true"
+                    >
+                  </div>
+                  <div class="main-input">
+                    <label for="callback-modal-form-user-phone">
+                      Телефон*
+                    </label>
+                    <input
+                      type="tel"
+                      id="callback-modal-form-user-phone"
+                      placeholder="+7 000 000 00 00"
+                      data-required="true"
+                    >
+                  </div>
+                </fieldset>
+                <button
+                  class="main-btn"
+                  type="submit"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                  >
+                    <use xlink:href="./assets/svg-sprite.svg#icon-envelope">
+                    </use>
+                  </svg>
+                  <span>
+                    Отправить
+                  </span>
+                </button>
+                <div class="main-checkbox main-form-accept">
+                  <label>
+                    Заполняя данную форму, я даю согласие на
+                    <a
+                      href="#"
+                      target="_blank"
+                    >
+                      обработку персональных данных
+                    </a>
+                    <input
+                      type="checkbox"
+                      id="callback-modal-form-user-accept"
+                      data-required="true"
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div
+        class="modal main-modal offer-modal"
+        id="offer-modal"
+      >
+        <div class="modal-wrapper">
+          <button
+            class="modal-closer"
+            type="button"
+            aria-label="Закрыть"
+          >
+            <svg
+              width="20"
+              height="20"
+            >
+              <use xlink:href="./assets/svg-sprite.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <div class="modal-header">
+            <span class="modal-title">
+              Оставить заявку
+            </span>
+            <span class="modal-text">
+              Оставьте свои данные и мы Вам перезвоним
+            </span>
+          </div>
+          <div class="modal-content">
+            <div class="main-form">
+              <form
+                action="#"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <input
+                  type="hidden"
+                  name="Заполненная форма:"
+                  value="Оставить заявку"
+                >
+                <input
+                  class="g-recaptcha-response"
+                  type="hidden"
+                  name="recaptcha"
+                >
+                <fieldset>
+                  <div class="main-input">
+                    <label for="offer-modal-form-user-name">
+                      Имя*
+                    </label>
+                    <input
+                      type="text"
+                      id="offer-modal-form-user-name"
+                      placeholder="Иван Петров"
+                      data-required="true"
+                    >
+                  </div>
+                  <div class="main-input">
+                    <label for="offer-modal-form-user-phone">
+                      Телефон*
+                    </label>
+                    <input
+                      type="tel"
+                      id="offer-modal-form-user-phone"
+                      placeholder="+7 000 000 00 00"
+                      data-required="true"
+                    >
+                  </div>
+                  <div class="main-input">
+                    <label for="offer-modal-form-user-link">
+                      Ссылка на Ваш сайт:
+                    </label>
+                    <input
+                      type="text"
+                      id="offer-modal-form-user-link"
+                      placeholder="www..."
+                    >
+                  </div>
+                  <div class="main-input">
+                    <label for="offer-modal-form-user-file">
+                      Файл с информацией о проекте:
+                    </label>
+                    <label
+                      class="file-attach-fake-control"
+                      for="offer-modal-form-user-file"
+                    >
+                      <svg
+                        width="21"
+                        height="21"
+                      >
+                        <use xlink:href="./assets/svg-sprite.svg#icon-attach">
+                        </use>
+                      </svg>
+                      <span>
+                        Нет файла
+                      </span>
+                    </label>
+                    <input
+                      type="file"
+                      id="offer-modal-form-user-file"
+                      name="Файл"
+                    >
+                  </div>
+                </fieldset>
+                <button
+                  class="main-btn"
+                  type="submit"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                  >
+                    <use xlink:href="./assets/svg-sprite.svg#icon-envelope">
+                    </use>
+                  </svg>
+                  <span>
+                    Отправить
+                  </span>
+                </button>
+                <div class="main-checkbox main-form-accept">
+                  <label>
+                    Заполняя данную форму, я даю согласие на
+                    <a
+                      href="#"
+                      target="_blank"
+                    >
+                      обработку персональных данных
+                    </a>
+                    <input
+                      type="checkbox"
+                      id="offer-modal-form-user-accept"
+                      data-required="true"
+                    >
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div
         class="modal main-modal success-modal"
         id="success-modal"
       >
-        <button
-          class="modal-closer"
-          type="button"
-          aria-label="Закрыть"
-        >
-          <svg
-            width="20"
-            height="20"
+        <div class="modal-wrapper">
+          <button
+            class="modal-closer"
+            type="button"
+            aria-label="Закрыть"
           >
-            <use xlink:href="./assets/svg-sprite.svg#icon-close">
-            </use>
-          </svg>
-        </button>
-        <div class="modal-content">
-          <span class="modal-title">
-            Спасибо !
-          </span>
-          <span class="modal-text">
-            Мы свяжемся в вами в ближайшее время!
-          </span>
+            <svg
+              width="20"
+              height="20"
+            >
+              <use xlink:href="./assets/svg-sprite.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <div class="modal-header">
+          </div>
+          <div class="modal-content">
+            <span class="modal-title">
+              Спасибо !
+            </span>
+            <span class="modal-text">
+              Мы свяжемся в вами в ближайшее время!
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -1293,26 +1557,30 @@
         class="modal main-modal error-modal"
         id="error-modal"
       >
-        <button
-          class="modal-closer"
-          type="button"
-          aria-label="Закрыть"
-        >
-          <svg
-            width="20"
-            height="20"
+        <div class="modal-wrapper">
+          <button
+            class="modal-closer"
+            type="button"
+            aria-label="Закрыть"
           >
-            <use xlink:href="./assets/svg-sprite.svg#icon-close">
-            </use>
-          </svg>
-        </button>
-        <div class="modal-content">
-          <span class="modal-title">
-            К сожалению, что-то пошло не так..
-          </span>
-          <span class="modal-text">
-            Попробуйте снова..
-          </span>
+            <svg
+              width="20"
+              height="20"
+            >
+              <use xlink:href="./assets/svg-sprite.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+          <div class="modal-header">
+          </div>
+          <div class="modal-content">
+            <span class="modal-title">
+              К сожалению, что-то пошло не так..
+            </span>
+            <span class="modal-text">
+              Попробуйте снова..
+            </span>
+          </div>
         </div>
       </div>
     </div>
