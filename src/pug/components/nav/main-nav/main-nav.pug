@@ -1,8 +1,10 @@
 .main-nav
   .main-nav__wrapper
-    button(type="button").nav-closer
-      svg(width="20" height="20")
-        use(xlink:href="./assets/svg-sprite.svg#icon-close")
+    .main-nav__header
+      include ../../company/logos/main-logo/main-logo
+      button(type="button").nav-closer
+        svg(width="20" height="20")
+          use(xlink:href="./assets/svg-sprite.svg#icon-close")
     ul.main-nav__list
       li.main-nav__list-item
         a(href="#") О компании
