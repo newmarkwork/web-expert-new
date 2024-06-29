@@ -9,7 +9,6 @@
   &__header {
     @extend %flex-column;
 
-    // position: relative;
     background-color: var(--primary);
     padding: var(--gap-lg) var(--gap-md);
     padding-top: var(--gap-xl);
