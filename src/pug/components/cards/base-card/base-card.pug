@@ -1,15 +1,23 @@
 include ../../controls/main-btn/main-btn
 
-mixin service-preview-card(data)
-  .service-preview-card
-    .service-preview-card__header
+mixin base-card(data)
+  .base-card
+    .base-card__header
       small!= data.label
       span!= data.title
-    .service-preview-card__content
-      .service-preview-card__content-section
-        p!= data.text
-    .service-preview-card__footer
-      span.service-preview-card__price!= data.cost
+
+    .base-card__content
+      .base-card__content-section
+        if data.text
+          p!= data.text
+        if data.featureList
+          ul.base-card__feature-list
+            each item in data.featureList
+              li!= item
+    .base-card__footer
+      if data.oldCost
+        span.base-card__price.base-card__price--old!= data.oldCost
+      span.base-card__price!= data.cost
 
       .flex-row
         +main-btn({

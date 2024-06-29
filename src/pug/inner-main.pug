@@ -1,0 +1,68 @@
+extends layouts/inner-layout.pug
+include ./components/cards/base-card/base-card
+
+block variables
+  - title = 'Web-Expert.ru'
+  - description = 'Разработка сайтов под ключ. Продвижение. Контекст'
+  - sectionTitle = "Наши услуги"
+  - sectionText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate deserunt laudantium blanditiis harum laborum fugiat neque tempora tempore ducimus voluptatibus, maiores obcaecati quasi officia? Id impedit itaque ut qui!"
+  - priceRow = ''
+  - offerBtn = true
+  //- Дополнительные файлы стили для КОНКРЕТНОЙ страницы
+  //- const styleFileNames = ['inner']
+
+block sectionTopContent
+  ul.base-cards-list
+    li
+      +base-card({
+        label: 'Seo продвижение сайтов',
+        title: 'Продвижение',
+        text: 'Включает в себя обновление содержимого сайта, поддержку пользователей и базовую оптимизацию для поисковых систем',
+        cost: '35 000 руб.'
+      })
+
+    li
+      +base-card({
+        label: 'Создание и разработка сайтов',
+        title: 'Разработка сайта',
+        text: 'Включает все опции базового тарифа, а также дополнительные услуги, такие как анализ конкурентов, улучшение дизайна и юзабилити сайта',
+        cost: '55 000 руб.'
+      })
+
+    li
+      +base-card({
+        label: 'Контекст',
+        title: 'Реклама в яндекс',
+        text: 'Включает в себя все опции стандартного тарифа, а также индивидуальную разработку стратегии продвижения сайта и работу с контекстом в интернете',
+        cost: '70 000 руб.'
+      })
+
+    li
+      +base-card({
+        label: 'Техническая поддержка',
+        title: 'Аудит сайта',
+        text: 'Включает в себя полный комплекс услуг по веб-поддержке, включая разработку и продвижение новых проектов, а также мониторинг и оптимизацию уже существующих ресурсов',
+        cost: '90 000 руб.'
+      })
+
+    li
+      +base-card({
+        label: 'Контекст',
+        title: 'Реклама в яндекс',
+        text: 'Включает в себя все опции стандартного тарифа, а также индивидуальную разработку стратегии продвижения сайта и работу с контекстом в интернете',
+        cost: '70 000 руб.'
+      })
+
+    li
+      +base-card({
+        label: 'Техническая поддержка',
+        title: 'Аудит сайта',
+        text: 'Включает в себя полный комплекс услуг по веб-поддержке, включая разработку и продвижение новых проектов, а также мониторинг и оптимизацию уже существующих ресурсов',
+        cost: '90 000 руб.'
+      })
+block bottomContent
+  include ./sections/common/offer
+
+block modals
+  //- Модальные окна используемые ТОЛЬКО на этой странице
+  //-

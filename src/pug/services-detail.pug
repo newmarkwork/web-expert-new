@@ -1,13 +1,22 @@
-extends layouts/main-layout.pug
+extends layouts/inner-layout.pug
+include ./components/cards/base-card/base-card
 
 block variables
   - title = 'Web-Expert.ru'
   - description = 'Разработка сайтов под ключ. Продвижение. Контекст'
+  - sectionTitle = "Создание и разработка сайтов под ключ"
+  - sectionText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate deserunt laudantium blanditiis harum laborum fugiat neque tempora tempore ducimus voluptatibus, maiores obcaecati quasi officia? Id impedit itaque ut qui!"
+  - priceRow = 'от 100 000 рублей'
+  - offerBtn = true
   //- Дополнительные файлы стили для КОНКРЕТНОЙ страницы
   //- const styleFileNames = ['inner']
 
-block content
-  include ./views/services/services-detail
+block bottomContent
+  include ./sections/inner-pages/services-detail-about
+  include ./sections/inner-pages/services-detail-features
+  include ./sections/inner-pages/services-detail-tariffs
+  include ./sections/inner-pages/services-detail-linked
+  include ./sections/common/offer
 
 block modals
   //- Модальные окна используемые ТОЛЬКО на этой странице

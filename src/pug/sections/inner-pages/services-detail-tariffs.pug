@@ -1,0 +1,44 @@
+include ../../components/controls/main-btn/main-btn
+include ../../components/cards/base-card/base-card
+
+section.inner-base-section.bg-alt
+  .container
+    h2.base-title Тарифы
+    ul.base-cards-list
+      li
+        +base-card({
+          label: 'Тариф',
+          title: 'Базовый',
+          featureList: [
+            'Гарантия вывода в ТОП-10 Яндекс.',
+            'Гарантия возврата денег.',
+            'Более 50 видов работ, которые проводятся ежемесячно'
+          ],
+          cost: '35 000 руб.',
+          oldCost: '50 000 руб.',
+        })
+
+      li
+        +base-card({
+          label: 'Тариф',
+          title: 'Оптимальный',
+          featureList: [
+            'Гарантия вывода в ТОП-10 Яндекс.',
+            'Гарантия возврата денег.',
+            'Более 50 видов работ, которые проводятся ежемесячно'
+          ],
+          cost: '55 000 руб.',
+          oldCost: '70 000 руб.',
+        })
+
+      li
+        +base-card({
+          label: 'Тариф',
+          title: 'Профессиональный',
+          featureList: [
+            'Гарантия вывода в ТОП-10 Яндекс.',
+            'Гарантия возврата денег.',
+            'Более 50 видов работ, которые проводятся ежемесячно'
+          ],
+          cost: '90 000 руб.',
+        })

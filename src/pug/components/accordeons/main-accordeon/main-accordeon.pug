@@ -1,5 +1,5 @@
 mixin main-accordeon(data)
-  .main-accordeon
+  .main-accordeon(class= data.class ? data.class : null)
     each item in data.items
       .main-accordeon__item
         .main-accordeon__item-header.collapsed

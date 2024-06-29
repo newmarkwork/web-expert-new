@@ -1,0 +1,13 @@
+.inner-base-section {
+  @extend %section-offset;
+
+  .container {
+    @extend %flex-column;
+  }
+
+  ul {
+    @extend %list-reset;
+
+    margin-bottom: var(--gap-xxl);
+  }
+}

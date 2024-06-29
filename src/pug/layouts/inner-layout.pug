@@ -1,0 +1,56 @@
+include ./main-head
+
+doctype html
+
+block variables
+  - sectionTitle = '';
+  - sectionText = '';
+  - priceRow = '';
+  - sectionClass = '';
+  - sectionId = '';
+  - offerBtn = false
+
+html(lang="ru")
+  +main-head(title, description, keywords, styleFileNames)
+
+  body
+    include ../components/loaders/loader
+    include ../components/header/header
+
+    main
+      section.inner-main-section(class= sectionClass id= sectionId)
+        .container
+          .inner-main-section__head
+            h1.main-title= sectionTitle
+            if sectionText
+              p.main-text= sectionText
+            if priceRow
+              span.price-row= priceRow
+            if offerBtn
+              +main-btn({
+                type: 'button',
+                text: 'Оставить заявку',
+                iconName: 'envelope',
+                iconWidth: 20,
+                iconHeight: 20,
+                iconPosition: 'left',
+                modal: 'offer-modal'
+              })
+          if sectionTopContent
+            .inner-main-section__content
+              block sectionTopContent
+
+      block bottomContent
+    include ../components/footer/footer
+
+    //- Модальные окна используемые на ВСЕХ страницах сайта
+
+
+    include ../modals/callback-modal
+    include ../modals/offer-modal
+    include ../modals/success-modal
+    include ../modals/error-modal
+
+    block modals
+
+    //- script(async src="https://api-maps.yandex.ru/2.1/?apikey=4aa8fccd-d097-4486-835a-704db2b05b2e&lang=ru_RU")

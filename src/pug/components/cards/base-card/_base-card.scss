@@ -1,4 +1,4 @@
-.service-preview-card {
+.base-card {
   @extend %flex-column;
   @extend %base-box-shadow;
 
@@ -9,6 +9,7 @@
   &__header {
     @extend %flex-column;
 
+    // position: relative;
     background-color: var(--primary);
     padding: var(--gap-lg) var(--gap-md);
     padding-top: var(--gap-xl);
@@ -55,57 +56,32 @@
     }
   }
 
-  &__stuff-list {
-    @extend %list-reset;
-    @extend %flex-wrap;
-
-    gap: var(--gap-xs);
-
-    &-item {
-      font-size: 12px;
-      padding: var(--gap-xs) var(--gap-sm);
-      border-radius: 30px;
-      background-color: var(--light);
-    }
-  }
-
-  &__works-list {
+  &__feature-list {
     @extend %list-reset;
     @extend %flex-column;
 
+    gap: var(--gap-sm);
+    margin-bottom: 0 !important;
+
     li {
-      font-size: 14px;
+      position: relative;
+      padding-left: 20px;
+      font-size: 16px;
 
-      &:has(strong) {
-        font-weight: var(--fw-b);
-
-        strong {
-          font-style: italic;
-          color: var(--primary);
-        }
-
-        margin-bottom: var(--gap-xs);
-      }
-
-      &:not(:has(strong)) {
-        position: relative;
-        padding-left: 20px;
-
-        &::before {
-          position: absolute;
-          top: 8px;
-          left: 4px;
-          content: '';
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background-color: var(--secondary);
-        }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '✓';
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary);
       }
     }
   }
 
   &__footer {
+    position: relative;
     margin-top: auto;
     padding: var(--gap-lg) var(--gap-md);
     padding-top: 0;
@@ -120,9 +96,16 @@
   }
 
   &__price {
-    display: inline-block;
+    display: block;
     font-weight: var(--fw-sb);
     font-size: calc(var(--fs-md) * 1.4);
     margin-bottom: var(--gap-md);
+
+    &--old {
+      font-size: var(--fs-sm);
+      margin-bottom: 0;
+      color: var(--primary);
+      text-decoration: line-through;
+    }
   }
 }

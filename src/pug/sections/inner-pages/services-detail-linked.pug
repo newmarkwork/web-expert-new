@@ -1,0 +1,27 @@
+include ../../components/controls/main-btn/main-btn
+include ../../components/cards/simple-card/simple-card
+
+section.inner-base-section.bg-alt
+  .container
+    h2.base-title Возможно Вас заинтересует
+    ul.base-cards-list
+      li
+        +simple-card({
+          label: 'Услуга',
+          title: 'Продвижение сайта',
+          cost: 'от 45 000 руб.',
+        })
+
+      li
+        +simple-card({
+          label: 'Услуга',
+          title: 'Подключение и настройка контекстной рекламы',
+
+        })
+
+      li
+        +simple-card({
+          label: 'Услуга',
+          title: 'Техническая поддержка',
+          cost: 'от 20 000 руб.'
+        })

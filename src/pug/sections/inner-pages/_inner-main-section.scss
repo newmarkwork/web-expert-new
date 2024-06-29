@@ -1,0 +1,32 @@
+.inner-main-section {
+  @extend %section-offset;
+
+  .container {
+    @extend %flex-column;
+
+    gap: var(--gap-xxxl) 0;
+  }
+
+  .main-text,
+  .main-title {
+    text-align: center;
+    color: var(--black);
+  }
+
+  .main-text {
+    margin-bottom: var(--gap-xl);
+  }
+
+  .price-row {
+    display: inline-block;
+    width: 100%;
+    font-size: var(--fs-lg);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: var(--gap-xl);
+  }
+
+  .main-btn {
+    margin: 0 auto;
+  }
+}

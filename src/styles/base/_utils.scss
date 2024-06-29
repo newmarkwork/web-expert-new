@@ -4,6 +4,18 @@
   gap: var(--gap-m);
 }
 
+.base-cards-list {
+  @extend %base-cards-list;
+}
+
+.bg-alt {
+  background-color: var(--light);
+}
+
+.text-center {
+  text-align: center;
+}
+
 input:not(input[type='checkbox']).invalid-control,
 input:not(input[type='checkbox']).invalid-control::placeholder {
   border-color: var(--danger);

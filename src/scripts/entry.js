@@ -1,3 +1,5 @@
+'use strict';
+
 import './modules/page-loading';
 import './modules/collapsed-text';
 import './modules/swiper';

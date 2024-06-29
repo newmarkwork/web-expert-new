@@ -6,7 +6,7 @@
   margin-top: calc(-1 * var(--gap-m));
 }
 
-%base-list-grid {
+%base-cards-list {
   @extend %list-reset;
 
   display: grid;

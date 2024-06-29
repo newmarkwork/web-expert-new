@@ -6,6 +6,23 @@
 @import './global';
 @import './libs';
 
+//  layouts
+@import '../pug/layouts/modals/modal';
+
+// sections
+
+@import '../pug/sections/index-page/hero';
+@import '../pug/sections/index-page/features';
+@import '../pug/sections/index-page/about';
+@import '../pug/sections/index-page/services';
+@import '../pug/sections/index-page/support';
+@import '../pug/sections/index-page/advantages';
+@import '../pug/sections/index-page/reviews';
+@import '../pug/sections/inner-pages/inner-main-section';
+@import '../pug/sections/inner-pages/inner-base-section';
+@import '../pug/sections/common/faq';
+@import '../pug/sections/common/offer';
+
 // components
 @import '../pug/components/loaders/loader';
 @import '../pug/components/header/header';
@@ -17,26 +34,11 @@
 @import '../pug/components/burger/burger';
 @import '../pug/components/controls/main-checkbox/main-checkbox';
 @import '../pug/components/lists/advantages-list/advantages-list';
+@import '../pug/components/lists/service-stuff-list/service-stuff-list';
 @import '../pug/components/cards/review-card/review-card';
-@import '../pug/components/cards/service-preview-card/service-preview-card';
+@import '../pug/components/cards/base-card/base-card';
 @import '../pug/components/cards/stuff-card/stuff-card';
+@import '../pug/components/cards/simple-card/simple-card';
 @import '../pug/components/accordeons/main-accordeon/main-accordeon';
 @import '../pug/components/forms/main-form';
 @import '../pug/components/footer/footer';
-
-// sections
-
-@import '../pug/sections/index-page/hero';
-@import '../pug/sections/index-page/features';
-@import '../pug/sections/index-page/about';
-@import '../pug/sections/index-page/services';
-@import '../pug/sections/index-page/support';
-@import '../pug/sections/index-page/advantages';
-@import '../pug/sections/index-page/reviews';
-@import '../pug/sections/common/faq';
-@import '../pug/sections/common/offer';
-@import '../pug/views/services/services';
-@import '../pug/views/services/services-detail';
-
-//  modals
-@import '../pug/modals/modal';

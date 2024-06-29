@@ -1,0 +1,17 @@
+include ../../controls/main-btn/main-btn
+
+mixin simple-card(data)
+  .simple-card
+    if data.label
+      small.simple-card__label!= data.label
+    span.simple-card__title!= data.title
+    if data.text
+      span.simple-card__text!= data.text
+    if data.cost
+      span.simple-card__cost!= data.cost
+    +main-btn({
+      type: 'link',
+      text: 'Подробнее',
+      href: '#',
+    })
+
