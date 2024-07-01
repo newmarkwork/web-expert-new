@@ -37,4 +37,17 @@
   .main-btn {
     margin: 0 auto;
   }
+
+  small {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  img {
+    margin-bottom: 40px;
+    object-fit: cover;
+    height: 60vw;
+    max-height: 400px;
+  }
 }

@@ -1,0 +1,10 @@
+mixin info-card(data)
+  .info-card(class= data.cls ? data.cls : null)
+    .info-card__content
+      small.info-card__label!= data.label
+      span.info-card__title!= data.title
+
+      p.info-card__text!= data.text
+
+      if data.link
+        a(href="#").main-btn!= data.link

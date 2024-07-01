@@ -1,0 +1,51 @@
+extends layouts/inner-layout.pug
+include ./components/cards/info-card/info-card
+
+block variables
+  - title = 'Web-Expert.ru'
+  - description = 'Разработка сайтов под ключ. Продвижение. Контекст'
+  - sectionTitle = "Акции/Блог"
+  //- Дополнительные файлы стили для КОНКРЕТНОЙ страницы
+  //- const styleFileNames = ['inner']
+
+block sectionTopContent
+  .inner-main-section__content
+    ul.base-cards-list
+      li
+        +info-card({
+          label: 'Акция',
+          title: 'Скидка на продвижение сайта <i>-20%</i>',
+          text: 'Только до конца лета, скидка <i>-20%</i> на SEO-продвижение сайта при заключении договора на год!',
+          link: 'Подробнее',
+          cls: ''
+        })
+      li
+        +info-card({
+          label: 'Акция',
+          title: 'Скидка на продвижение сайта <i>-20%</i>',
+          text: 'Только до конца лета, скидка <i>-20%</i> на SEO-продвижение сайта при заключении договора на год!',
+          link: 'Подробнее',
+          cls: 'info-card--bg'
+        })
+      li
+        +info-card({
+          label: 'Блог',
+          title: 'Что такое хостинг и с чем его едят',
+          text: 'Рассказываем где живут сайты, как это устроено и какой хостинг лучше выбрать',
+          link: 'Подробнее',
+        })
+      li
+        +info-card({
+          label: 'Новость',
+          title: 'Заголовок какой то новости',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+          link: 'Подробнее',
+          cls: 'info-card--bg'
+        })
+
+block bottomContent
+  include ./sections/common/offer
+
+block modals
+  //- Модальные окна используемые ТОЛЬКО на этой странице
+  //-

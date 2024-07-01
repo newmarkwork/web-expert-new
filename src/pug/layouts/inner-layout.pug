@@ -8,6 +8,7 @@ block variables
   - priceRow = '';
   - sectionClass = '';
   - sectionId = '';
+  - sectionSmall = '';
   - offerBtn = false
 
 html(lang="ru")
@@ -22,6 +23,8 @@ html(lang="ru")
       section.inner-main-section(class= sectionClass id= sectionId)
         .container
           .inner-main-section__head
+            if sectionSmall
+              small= sectionSmall
             h1.main-title= sectionTitle
             if sectionText
               p.main-text= sectionText
@@ -37,6 +40,7 @@ html(lang="ru")
                 iconPosition: 'left',
                 modal: 'offer-modal'
               })
+
           block sectionTopContent
 
       block bottomContent
