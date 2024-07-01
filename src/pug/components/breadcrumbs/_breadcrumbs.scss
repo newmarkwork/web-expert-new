@@ -1,0 +1,46 @@
+.breadcrumbs {
+  padding: var(--gap-sm);
+
+  .container {
+    @extend %flex-align;
+
+    justify-content: center;
+  }
+
+  a,
+  span {
+    font-size: 14px;
+  }
+
+  span {
+    color: var(--primary);
+  }
+
+  a {
+    position: relative;
+    padding-right: 20px;
+    margin-right: 20px;
+    color: var(--black);
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      content: '';
+      width: 2px;
+      height: 100%;
+      background-color: var(--primary);
+    }
+  }
+
+  display: none;
+
+  @include media-up($tablet-width) {
+    display: block;
+  }
+
+  & + .inner-main-section {
+    padding-top: var(--gap-lg);
+  }
+}
