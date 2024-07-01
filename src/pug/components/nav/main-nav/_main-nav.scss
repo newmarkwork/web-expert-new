@@ -60,6 +60,7 @@
         transition:
           opacity var(--base-transition),
           text-shadow var(--base-transition);
+        color: var(--black);
       }
 
       &--nested {

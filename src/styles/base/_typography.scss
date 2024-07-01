@@ -7,13 +7,13 @@ h6,
 .base-title,
 .main-title {
   margin-top: 0;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.5em;
   font-weight: var(--fw-b);
 }
 
 p {
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
   font-weight: var(--fw-r);
 }
 
@@ -22,23 +22,31 @@ h1 {
 }
 
 h2 {
-  font-size: var(--fs-md);
+  font-size: calc(var(--fs-md) * 1.8);
 }
 
 h3 {
-  font-size: var(--fs-sm);
+  font-size: calc(var(--fs-md) * 1.4);
 }
 
 h4 {
-  font-size: var(--fs-xs);
+  font-size: calc(var(--fs-md) * 1.2);
 }
 
 h5 {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
 }
 
 h6 {
   font-size: var(--fs-xs);
+}
+
+small {
+  font-size: var(--fs-xs);
+}
+
+a {
+  color: var(--primary);
 }
 
 .main-title {

@@ -1,0 +1,15 @@
+blockquote {
+  position: relative;
+  padding-left: var(--gap-md);
+  margin-left: 0;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--primary);
+  }
+}

@@ -7,6 +7,7 @@
     font-weight: 400;
 
     &:first-child {
+      color: var(--black);
       font-size: clamp(18px, 2.4vw, 24px);
     }
 

@@ -1,0 +1,67 @@
+extends layouts/inner-layout.pug
+include ./components/cards/base-card/base-card
+
+block variables
+  - title = 'Web-Expert.ru'
+  - description = 'Разработка сайтов под ключ. Продвижение. Контекст'
+  - sectionTitle = 'Главный заголовок (Тег H1)'
+  //- Дополнительные файлы стили для КОНКРЕТНОЙ страницы
+  //- const styleFileNames = ['inner']
+
+block sectionTopContent
+  .inner-main-section__content
+
+    h2 Заголовок контентной страницы h2
+    h3 Заголовок контентной страницы h3
+    h4 Заголовок контентной страницы h4
+
+    p Параграф текста:
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempora aliquam amet cupiditate ex? Numquam saepe modi, corrupti illum officia sit dignissimos maiores. Exercitationem corporis nisi consequuntur est voluptatibus sed!
+
+    span Просто текст (Тег span)<br>
+    small Текст уменьшенного размера (Тег span)<br>
+    p Текст, включающий в себя <strong> текст выделенный жирностью (Тег strong) </strong>
+
+    p Текст, включающий в себя <a href="#"> ссылку </a>
+
+    p Ненумерованный список элементов:
+    ul
+      li элемент
+      li элемент
+      li элемент
+      li элемент
+
+    p Нумерованный список элементов:
+    ol
+      li элемент
+      li элемент
+      li элемент
+      li элемент
+
+    blockquote
+      | Заметка (Тег blockquote) <br>
+      | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente nemo voluptatibus facilis ipsum, nostrum reprehenderit natus eveniet quis eos esse aspernatur voluptates quasi totam molestias a ad, sunt unde! Atque!
+
+    table
+      thead
+        tr
+          td Ячейка 1
+          td Ячейка 2
+          td Ячейка 3
+      tbody
+        tr
+          td Значение 1
+          td Значение 2
+          td Значение 3
+        tr
+          td Значение 1
+          td Значение 2
+          td Значение 3
+        tr
+          td Значение 1
+          td Значение 2
+          td Значение 3
+
+block modals
+  //- Модальные окна используемые ТОЛЬКО на этой странице
+  //-

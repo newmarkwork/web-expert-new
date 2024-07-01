@@ -1,10 +1,11 @@
 @import './variables';
 @import './mixins';
 @import './fonts';
-@import './base';
 @import './extends';
-@import './global';
 @import './libs';
+@import './global';
+@import './base';
+@import './ui';
 
 //  layouts
 @import '../pug/layouts/modals/modal';
