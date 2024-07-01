@@ -1,7 +1,10 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
   z-index: 89;
   padding: var(--gap-sm) 0;
+  box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
 
   &__container {
     @extend %flex-wrap;

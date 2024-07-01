@@ -1,5 +1,6 @@
 .simple-card {
   @extend %flex-column;
+  @extend %base-box-shadow;
 
   width: 100%;
   height: 100%;

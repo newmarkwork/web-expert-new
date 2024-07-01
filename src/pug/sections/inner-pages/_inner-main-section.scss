@@ -4,13 +4,21 @@
   .container {
     @extend %flex-column;
 
-    gap: var(--gap-xxxl) 0;
+    gap: var(--gap-xxl) 0;
+  }
+
+  &__content {
+    padding-top: var(--gap-xl);
   }
 
   .main-text,
   .main-title {
     text-align: center;
     color: var(--black);
+  }
+
+  &:not(:has(.main-title + *)) .main-title {
+    margin-bottom: 0;
   }
 
   .main-text {
