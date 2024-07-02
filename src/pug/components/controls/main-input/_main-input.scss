@@ -1,7 +1,7 @@
 $main-input-label-color: var(--white);
 $main-input-bg-color: var(--white);
 $main-input-color: var(--black);
-$main-input-placeholder-color: #a8a8a8;
+$main-input-placeholder-color: #575757;
 $main-input-padding: var(--gap-sm) var(--gap-md);
 $main-input-border: 1px solid;
 $main-input-border-color: var(--white);
@@ -42,7 +42,7 @@ $main-input-border-radius: 10px;
       width: 21px;
       height: 21px;
       min-width: 21px;
-      fill: #a8a8a8;
+      fill: $main-input-placeholder-color;
     }
 
     display: flex;
@@ -54,6 +54,7 @@ $main-input-border-radius: 10px;
     span {
       @include text-truncate(1);
 
+      font-weight: 400;
       color: $main-input-placeholder-color;
     }
   }

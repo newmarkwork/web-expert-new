@@ -5,6 +5,6 @@ mixin advantages-list(data)
     each item of data.items
       li.advantages-list__item
         if item.iconName
-          img(src=`./assets/images/${item.iconName}.svg` alt= item.title width="50" height="50")
+          img(loading="lazy" src=`./assets/images/${item.iconName}.svg` alt= item.title width="50" height="50")
         strong!= item.title
         p.base-text!= item.text

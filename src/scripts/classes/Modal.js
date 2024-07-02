@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-//import { modalOverlay } from '../utils/nodesHelper';
 
 export class Modal {
   constructor(modal, options = {}) {
@@ -181,11 +180,9 @@ export class Modal {
   };
 
   init() {
-    console.log(this.openers);
     if (this.openers) {
       this.isInited = true;
       this.openers.forEach((opener) => {
-        console.log(opener);
         opener.addEventListener('click', this.openModal);
       });
     } else {

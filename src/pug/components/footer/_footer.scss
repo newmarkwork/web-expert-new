@@ -17,6 +17,12 @@
   .contact-block {
     order: 1;
 
+    a {
+      @extend %flex-center;
+
+      min-height: 36px;
+    }
+
     @include media-up($tablet-lg-width) {
       order: initial;
 

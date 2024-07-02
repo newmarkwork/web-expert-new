@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,9 +60,8 @@ if (section) {
       start: 'center bottom',
       scrub: true,
       end: '+=3000',
-      // markers: true,
     },
 
-    left: '100vw', // x ????
+    left: '100vw',
   });
 }

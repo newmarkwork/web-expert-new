@@ -2,7 +2,6 @@ import { Modal } from '../classes/Modal';
 import { loader } from '../helpers/nodes';
 
 export function sendForm(form) {
-  // const loader = document.querySelector('.loader');
   const successModal = document.querySelector('.success-modal');
   const errorModal = document.querySelector('.error-modal');
 
