@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const hero = document.querySelector('.hero');
 
   if (hero) {

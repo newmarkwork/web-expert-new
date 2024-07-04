@@ -14,3 +14,4 @@ import './modules/form-submit';
 import './modules/stuff-card';
 import './modules/tables';
 import './modules/video-container';
+import './modules/gsap/scroll-up-btn';

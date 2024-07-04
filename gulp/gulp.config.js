@@ -21,7 +21,7 @@ const config = {
   },
 
   styles: {
-    src: `${SOURCE_PATH}styles/*.scss`,
+    src: `${SOURCE_PATH}styles/template.scss`,
     watch: `${SOURCE_PATH}styles/**/*.scss`,
     dest: `${BUILD_PATH}assets/`,
   },
