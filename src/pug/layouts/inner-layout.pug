@@ -6,6 +6,7 @@ block variables
   - sectionTitle = '';
   - sectionText = '';
   - priceRow = '';
+  - oldPriceRow = '';
   - sectionClass = '';
   - sectionId = '';
   - sectionSmall = '';
@@ -28,6 +29,8 @@ html(lang="ru")
             h1.main-title= sectionTitle
             if sectionText
               p.main-text= sectionText
+            if oldPriceRow
+              span.price-row.price-row--old= oldPriceRow
             if priceRow
               span.price-row= priceRow
             if offerBtn

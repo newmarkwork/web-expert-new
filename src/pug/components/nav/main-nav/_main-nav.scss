@@ -150,6 +150,12 @@
       &:active {
         opacity: 0.6;
       }
+
+      &.selected > a {
+        text-shadow:
+          0 2px 20px #cea8ed,
+          0 0 1em var(--primary);
+      }
     }
   }
 

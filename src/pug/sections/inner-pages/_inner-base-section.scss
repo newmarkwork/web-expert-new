@@ -5,10 +5,14 @@
     @extend %flex-column;
   }
 
-  ul {
+  & > ul {
     @extend %list-reset;
 
     margin: 0 auto;
     margin-bottom: var(--gap-xxl);
+  }
+
+  &:nth-of-type(even) {
+    background-color: var(--light);
   }
 }

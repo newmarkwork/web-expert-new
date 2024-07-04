@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="./assets/template.min.css"
     >
+    <link
+      rel="prefetch"
+      href="./assets/images/hero-shape.svg"
+    >
     <script
       defer="defer"
       src="./assets/bundle.min.js"
@@ -191,12 +195,20 @@
     <main>
       <div class="breadcrumbs">
         <div class="container">
-          <a href="index.html">
-            Главная
-          </a>
-          <a href="inner-main.html">
-            Услуги
-          </a>
+          <div class="breadcrumbs__item">
+            <a href="index.html">
+              <span>
+                Главная
+              </span>
+            </a>
+          </div>
+          <div class="breadcrumbs__item">
+            <a href="inner-main.html">
+              <span>
+                Услуги
+              </span>
+            </a>
+          </div>
           <span>
             Создание и разработка сайтов под ключ
           </span>
@@ -387,6 +399,11 @@
                   type="hidden"
                   name="recaptcha"
                 >
+                <input
+                  type="hidden"
+                  name="TYPE"
+                  value="callback"
+                >
                 <fieldset>
                   <div class="main-input">
                     <label for="callback-modal-form-user-name">
@@ -483,6 +500,10 @@
                   class="g-recaptcha-response"
                   type="hidden"
                   name="recaptcha"
+                >
+                <input
+                  type="hidden"
+                  name="TYPE"
                 >
                 <fieldset>
                   <div class="main-input">

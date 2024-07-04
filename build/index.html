@@ -23,6 +23,10 @@
       rel="stylesheet"
       href="./assets/template.min.css"
     >
+    <link
+      rel="prefetch"
+      href="./assets/images/hero-shape.svg"
+    >
     <script
       defer="defer"
       src="./assets/bundle.min.js"
@@ -215,15 +219,11 @@
               </span>
             </button>
           </div>
-          <video
-            src="./assets/video/main-hero-video.mp4"
-            loop="true"
-            playsinline="true"
-            preload="auto"
-            autoplay="true"
-            muted="true"
+          <div
+            id="video-container"
+            data-src="./assets/video/main-hero-video.mp4"
           >
-          </video>
+          </div>
         </div>
       </section>
       <section class="features">
@@ -1101,6 +1101,11 @@
                 type="hidden"
                 name="recaptcha"
               >
+              <input
+                type="hidden"
+                name="TYPE"
+                value="offer"
+              >
               <div class="offer-form__wrapper">
                 <fieldset>
                   <div class="main-input">
@@ -1307,6 +1312,11 @@
                   type="hidden"
                   name="recaptcha"
                 >
+                <input
+                  type="hidden"
+                  name="TYPE"
+                  value="callback"
+                >
                 <fieldset>
                   <div class="main-input">
                     <label for="callback-modal-form-user-name">
@@ -1403,6 +1413,10 @@
                   class="g-recaptcha-response"
                   type="hidden"
                   name="recaptcha"
+                >
+                <input
+                  type="hidden"
+                  name="TYPE"
                 >
                 <fieldset>
                   <div class="main-input">

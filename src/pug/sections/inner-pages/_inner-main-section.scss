@@ -11,6 +11,14 @@
     padding-top: var(--gap-xl);
   }
 
+  &__head {
+    &:has(small + .main-title) small {
+      display: block;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
   .main-text,
   .main-title {
     text-align: center;
@@ -32,16 +40,17 @@
     line-height: 1;
     text-align: center;
     margin-bottom: var(--gap-xl);
+
+    &--old {
+      font-size: var(--fs-md);
+      color: var(--accent);
+      text-decoration: line-through;
+      margin-bottom: var(--gap-sm);
+    }
   }
 
   .main-btn {
     margin: 0 auto;
-  }
-
-  &:has(small + .main-title) small {
-    display: block;
-    font-size: 14px;
-    text-align: center;
   }
 
   img {

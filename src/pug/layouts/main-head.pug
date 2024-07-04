@@ -9,7 +9,7 @@ mixin main-head(title, descriprion, keywords, styleFileNames)
     meta(name="description" content!= descriprion)
     meta(name="keywords" content!= keywords)
     link(rel="stylesheet" href!=`./assets/template${isProd ? '.min' : ''}.css`)
-
+    link(rel="prefetch" href="./assets/images/hero-shape.svg")
     if styleFileNames
       each fileName in styleFileNames
         link(rel="stylesheet" href!=`./assets/${fileName}${isProd ? '.min' : ''}.css`)

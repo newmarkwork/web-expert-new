@@ -10,6 +10,7 @@ section.offer
       form(action="#" method="POST" enctype="multipart/form-data")
         input(type="hidden" name="Заполненная форма:" value='Форма обратной связи')
         input(type="hidden" name="recaptcha").g-recaptcha-response
+        input(type="hidden" name="TYPE" value="offer")
 
         .offer-form__wrapper
           fieldset
