@@ -10,6 +10,8 @@ window.addEventListener('load', () => {
     video.setAttribute('loop', 'loop');
     video.setAttribute('playsinline', 'playsinline');
     video.setAttribute('autoplay', 'autoplay');
+    video.setAttribute('width', '1920');
+    video.setAttribute('height', '640');
     video.setAttribute('src', container.dataset.src);
 
     container.append(video);

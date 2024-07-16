@@ -3,11 +3,8 @@ import { gsap } from 'gsap';
 window.addEventListener('load', () => {
   const btn = document.createElement('button');
   btn.classList.add('scroll-up-btn');
-  btn.innerHTML =
-    '<svg width="16" height="16"><use xlink:href="../assets/svg-sprite.svg#icon-up"></use></svg>';
+  btn.setAttribute('aria-label', 'Наверх');
 
-  const svg = btn.querySelector('svg');
-  gsap.set(svg, { fill: 'var(--white)' });
   gsap.set(btn, {
     display: 'flex',
     alignItems: 'center',
@@ -18,22 +15,26 @@ window.addEventListener('load', () => {
     width: '50px',
     height: '50px',
     borderRadius: '50%',
-    background: 'var(--primary)',
+    backgroundColor: 'var(--primary)',
     zIndex: 89,
     mixBlendMode: 'multiply',
     padding: '5px',
     border: 'none',
     transform: 'translateY(150px)',
+    backgroundImage:
+      'url(/local/templates/web-expert/assets/images/icon-up.svg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '16px',
+    backgroundPosition: 'center',
   });
 
   document.body.append(btn);
 
   let isActive = false;
   window.addEventListener('scroll', () => {
-    const fullHeight = document.documentElement.clientHeight;
-    const pageHeight = document.documentElement.clientHeight;
+    const viewportHeight = document.documentElement.clientHeight;
 
-    if (window.scrollY > pageHeight * 1.3) {
+    if (window.scrollY > viewportHeight * 1.3) {
       if (!isActive) {
         isActive = true;
         gsap.fromTo(
