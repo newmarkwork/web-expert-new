@@ -3,3 +3,15 @@
   border-radius: 4px;
   border: 1px dashed var(--primary);
 }
+
+.solid-wrapper {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+}
+
+.color-bg-wrapper {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #e5dce3;
+}
