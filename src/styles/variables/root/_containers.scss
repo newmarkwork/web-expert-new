@@ -7,7 +7,7 @@
   --container-fluid-width: calc(
     var(--content-fluid-width) + (var(--container-fluid-offset) * 2)
   );
-  --content-thin-width: 1440px;
+  --content-thin-width: 1200px;
   --container-thin-offset: clamp(10px, 2vw, 60px);
   --container-thin-width: calc(
     var(--content-thin-width) + (var(--container-offset) * 2)
