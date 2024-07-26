@@ -11,3 +11,10 @@
   padding: 0 var(--container-fuild-offset);
   max-width: var(--container-fluid-width);
 }
+
+.container-thin {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-thin-offset);
+  max-width: var(--container-thin-width);
+}
