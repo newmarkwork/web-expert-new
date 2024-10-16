@@ -15,3 +15,8 @@ import './modules/stuff-card';
 import './modules/tables';
 import './modules/video-container';
 import './modules/gsap/scroll-up-btn';
+
+import { Fancybox } from '@fancyapps/ui';
+Fancybox.bind('[data-fancybox]', {
+  // Your custom options
+});

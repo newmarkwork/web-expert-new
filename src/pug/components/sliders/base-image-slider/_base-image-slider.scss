@@ -1,0 +1,39 @@
+.base-image-slider {
+  .swiper-slide {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+
+    @include media-up($mobile-width) {
+      width: 50vw;
+      max-width: 600px;
+    }
+
+    @extend %flex-column;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+
+    .base-text {
+      @include text-truncate(4);
+    }
+  }
+
+  &__slide-content {
+    @extend %flex-column;
+    gap: 16px;
+    padding: 10px;
+    padding-top: 16px;
+  }
+
+  &__title {
+    font-size: clamp(18px, 2.6vw, 20px);
+    font-weight: 700;
+    @include text-truncate(2);
+  }
+}

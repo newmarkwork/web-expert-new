@@ -18,12 +18,14 @@
 @import '../pug/sections/index-page/services';
 @import '../pug/sections/index-page/support';
 @import '../pug/sections/index-page/advantages';
+
 @import '../pug/sections/index-page/reviews';
 @import '../pug/sections/common/faq';
 @import '../pug/sections/common/offer';
 @import '../pug/sections/inner-pages/inner-main-section';
 @import '../pug/sections/inner-pages/inner-base-section';
 @import '../pug/sections/inner-pages/contacts';
+@import '../pug/sections/common/slider-section';
 
 // components
 @import '../pug/components/loaders/loader';
@@ -34,6 +36,7 @@
 @import '../pug/components/company/contact-block/contact-block';
 @import '../pug/components/controls/main-btn/main-btn';
 @import '../pug/components/controls/main-input/main-input';
+@import '../pug/components/sliders/base-image-slider/base-image-slider';
 @import '../pug/components/burger/burger';
 @import '../pug/components/controls/main-checkbox/main-checkbox';
 @import '../pug/components/lists/advantages-list/advantages-list';

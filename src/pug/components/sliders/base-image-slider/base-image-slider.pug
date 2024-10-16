@@ -1,0 +1,20 @@
+mixin base-image-slider(data)
+  .swiper-container.base-image-slider
+    .swiper-header
+      h2.base-title!= data.title
+      .swiper-controls
+        .swiper-navigation
+          .swiper-button-prev.swiper-button-prev--primary
+          .swiper-button-next.swiper-button-prev--primary
+    .swiper.main-slider
+      .swiper-wrapper
+        each slide in data.slides
+          .swiper-slide
+            img(src=`../assets/images/${slide.img}` data-fancybox= data.fancyGallery ? data.fancyGallery : null alt= data.title width='400' height='300')
+
+            if slide.title || slide.text
+              .base-image-slider__slide-content
+                if slide.title
+                  span.base-text.base-image-slider__title!= slide.title
+                if slide.text
+                  span.base-text!= slide.text

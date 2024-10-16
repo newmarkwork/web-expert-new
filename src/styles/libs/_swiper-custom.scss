@@ -7,7 +7,7 @@
   position: relative;
   padding-bottom: 80px;
 
-  @include media-up($mobile-width) {
+  @include media-up(620px) {
     padding-bottom: 0;
   }
 }
@@ -17,13 +17,16 @@
 
   margin-bottom: var(--gap-xl);
 
-  @include media-up($mobile-width) {
+  @include media-up(620px) {
     position: relative;
   }
 
   .base-title {
     margin: 0;
-    padding: 0 115px;
+    padding: 0;
+    @include media-up(620px) {
+      padding: 0 115px;
+    }
   }
 
   .swiper-controls {
@@ -32,7 +35,7 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @include media-up($mobile-width) {
+    @include media-up(620px) {
       left: unset;
       right: 0;
       bottom: unset;
@@ -47,7 +50,7 @@
     width: fit-content;
     gap: var(--gap-lg);
 
-    @include media-up($mobile-width) {
+    @include media-up(620px) {
       gap: var(--gap-xl);
     }
   }
@@ -66,5 +69,13 @@
   &::after {
     font-size: 16px;
     color: var(--white);
+  }
+
+  &--primary {
+    border-color: var(--primary);
+
+    &::after {
+      color: var(--primary);
+    }
   }
 }
