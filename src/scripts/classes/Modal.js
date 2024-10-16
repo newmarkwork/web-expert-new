@@ -187,7 +187,7 @@ export class Modal {
       });
     } else {
       console.error(
-        'Не добавлена кнопка открытия модального окна, либо в ней не прописан аттр-т: data-modal-anchor={modal-id} '
+        'Не добавлена кнопка открытия модального окна, либо в ней не прописан аттр-т: data-modal-opener={modal-id} '
       );
     }
   }
