@@ -102,6 +102,7 @@
       order: initial;
       max-width: 270px;
       gap: var(--gap-xs);
+      align-items: flex-start;
     }
 
     @include media-up(1320px) {
@@ -137,12 +138,8 @@
 
       @include media-up($laptop-width) {
         order: initial;
-        align-self: end;
+        align-self: start;
         font-size: 12px;
-      }
-
-      @include media-up(1320px) {
-        text-align: right;
       }
     }
 
