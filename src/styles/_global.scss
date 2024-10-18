@@ -9,6 +9,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -88,4 +89,9 @@ picture {
 
 .grecaptcha-badge {
   z-index: 79;
+}
+
+*[id].anchor-item {
+  margin-top: -100px;
+  padding-top: 100px;
 }
