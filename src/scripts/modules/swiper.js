@@ -27,3 +27,21 @@ if (sliders.length) {
     });
   });
 }
+
+const heroSlider = document.querySelector('.hero-slider');
+
+if (heroSlider) {
+  const pagination = heroSlider.querySelector('.hero-slider .pagination');
+
+  new Swiper(heroSlider, {
+    modules: [Pagination],
+    slidesPerView: 1,
+    // spaceBetween: 10,
+
+    pagination: {
+      el: pagination ? pagination : null,
+      // dynamicBullets: true,
+      clickable: true,
+    },
+  });
+}

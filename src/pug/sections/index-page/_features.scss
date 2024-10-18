@@ -4,6 +4,7 @@
   position: relative;
 
   @extend %section-offset;
+  padding-top: 60px;
 
   &__list {
     @extend %list-reset;

@@ -1,36 +1,31 @@
 .hero {
   position: relative;
-  padding: clamp(40px, 5vw, 120px) 0 clamp(120px, 8vw, 160px);
-  background-color: var(--primary);
   overflow: hidden;
+  outline: 1px solid white;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(0 0 0 / 40%);
-    width: 100%;
-    height: 100%;
-    content: '';
-    z-index: 1;
-  }
+  // &::before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background-color: rgb(0 0 0 / 40%);
+  //   width: 100%;
+  //   height: 100%;
+  //   content: '';
+  //   z-index: 1;
+  // }
 
-  &::after {
-    position: absolute;
-    top: 30px;
-    right: -30px;
-    content: '';
-    background-image: url('../assets/images/hero-shape.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    height: calc(100% - 30px);
-  }
-
-  &__content {
-    position: relative;
-    z-index: 3;
-  }
+  // &::after {
+  //   position: absolute;
+  //   top: 30px;
+  //   right: -30px;
+  //   content: '';
+  //   background-image: url('../assets/images/hero-shape.svg');
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   width: 50%;
+  //   height: calc(100% - 30px);
+  //   z-index: 3;
+  // }
 
   .main-text {
     margin-bottom: 30px;
@@ -49,13 +44,55 @@
     }
   }
 
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100%;
-    z-index: 0;
-    object-fit: cover;
+  // video {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100dvw;
+  //   height: 100%;
+  //   z-index: 0;
+  //   object-fit: cover;
+  // }
+
+  &-slider {
+    // background-color: var(--primary);
+
+    .pagination {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: fit-content !important;
+      z-index: 3;
+
+      .swiper-pagination-bullet {
+        background-color: var(--white);
+      }
+    }
+
+    .swiper-slide {
+      @extend %flex-column;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--primary);
+      padding: 100px 0;
+
+      .main-btn {
+        margin-top: auto;
+      }
+
+      &.no-bg .main-btn {
+        border-color: var(--white);
+      }
+
+      .main-title {
+        max-width: 900px;
+      }
+
+      .main-text {
+        max-width: 1000px;
+      }
+    }
   }
 }

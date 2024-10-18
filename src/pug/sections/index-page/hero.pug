@@ -1,20 +1,42 @@
 include ../../components/controls/main-btn/main-btn
 
 section.hero
-  .container
-    .hero__content
-      h1.main-title Не откладывайте развитие своего сайта на потом!
-      p.main-text Обратитесь к профессионалам из компании Веб-эксперт и получите комплексную веб поддержку, которая поможет вашему бизнесу расти и развиваться!
+  .container-fluid
+    //- .hero__content
+    .swiper.hero-slider
+      .swiper-wrapper
+        .swiper-slide(style="background-image: url('./assets/images/mock-img.png')")
+          .container
+            h1.main-title Не откладывайте развитие своего сайта на потом!
+            p.main-text Обратитесь к профессионалам из компании Веб-эксперт и получите комплексную веб поддержку, которая поможет вашему бизнесу расти и развиваться!
 
-      +main-btn({
-        type: 'button',
-        text: 'Оставить заявку',
-        cls: 'hero__offer-btn',
-        iconName: 'envelope',
-        iconWidth: 20,
-        iconHeight: 20,
-        iconPosition: 'left',
-        modal: 'offer-modal'
-      })
+            +main-btn({
+              type: 'button',
+              text: 'Оставить заявку',
+              cls: 'hero__offer-btn',
+              iconName: 'envelope',
+              iconWidth: 20,
+              iconHeight: 20,
+              iconPosition: 'left',
+              modal: 'offer-modal'
+            })
+        .swiper-slide.no-bg
+          .container
+            h1.main-title Не откладывайте развитие своего сайта на потом!
+            p.main-text Обратитесь к профессионалам из компании Веб-эксперт и получите комплексную веб поддержку, которая поможет вашему бизнесу расти и развиваться!
 
-    #video-container(data-src="./assets/video/main-hero-video.webm")
+            +main-btn({
+              type: 'button',
+              text: 'Оставить заявку',
+              cls: 'hero__offer-btn',
+              iconName: 'envelope',
+              iconWidth: 20,
+              iconHeight: 20,
+              iconPosition: 'left',
+              modal: 'offer-modal'
+            })
+
+
+      .pagination
+
+    //- #video-container(data-src="./assets/video/main-hero-video.webm")
