@@ -36,16 +36,14 @@ if (heroSlider) {
   new Swiper(heroSlider, {
     modules: [Pagination, Autoplay],
     slidesPerView: 1,
-    // spaceBetween: 10,
     loop: true,
 
     autoplay: {
-      delay: 5000,
+      delay: 10000,
     },
 
     pagination: {
       el: pagination ? pagination : null,
-      // dynamicBullets: true,
       clickable: true,
     },
   });

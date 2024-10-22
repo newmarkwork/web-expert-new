@@ -1,15 +1,36 @@
 .breadcrumbs {
   padding: var(--gap-sm);
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
 
   .container {
     @extend %flex-align;
 
-    justify-content: center;
+    // justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      background-color: var(--scrollbar-color);
+      width: 4px;
+      height: 2px;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-thumb-color);
+      border-radius: 4px;
+    }
   }
 
   a,
   span {
     font-size: 14px;
+    white-space: nowrap;
   }
 
   span:not(a > span) {
@@ -34,11 +55,12 @@
     }
   }
 
-  display: none;
+  // display: none;
 
-  @include media-up($tablet-width) {
-    display: block;
-  }
+  // @include media-up($tablet-width) {
+  //   display: block;
+  // }
+  display: block;
 
   & + .inner-main-section {
     padding-top: var(--gap-lg);
