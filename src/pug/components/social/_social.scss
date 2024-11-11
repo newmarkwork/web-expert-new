@@ -1,0 +1,23 @@
+.social {
+  &__list {
+    @extend %list-reset;
+    @extend %flex-align;
+    gap: 4px;
+
+    @include media-up(390px) {
+      gap: 8px;
+    }
+
+    a {
+      @extend %flex-center;
+      width: 32px;
+      height: 32px;
+
+      img {
+        width: 24px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

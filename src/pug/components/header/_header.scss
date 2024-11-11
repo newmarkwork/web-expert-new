@@ -10,15 +10,15 @@
     @extend %flex-wrap;
 
     align-items: center;
-    gap: var(--gap-md);
+    gap: var(--gap-sm);
 
     @include media-up(1240px) {
-      gap: var(--gap-xxl);
+      gap: var(--gap-xl);
     }
   }
 
   .main-logo {
-    max-width: 160px;
+    max-width: 120px;
     margin-right: auto;
 
     @include media-up($mobile-width) {
@@ -30,7 +30,7 @@
     margin: 0 auto;
     display: none;
 
-    @include media-up(620px) {
+    @include media-up(687px) {
       display: flex;
     }
 
@@ -53,13 +53,18 @@
     padding: 10px;
     min-width: 40px;
     min-height: 40px;
+    // display: none;
+
+    // @include media-up(420px) {
+    //   display: flex;
+    // }
 
     @include media-up($mobile-width) {
       min-width: 50px;
       min-height: 50px;
     }
 
-    @include media-up(1360px) {
+    @include media-up(1440px) {
       border-radius: 30px;
       padding: 10px 20px 12px;
     }
@@ -71,7 +76,7 @@
     span {
       display: none;
 
-      @include media-up(1360px) {
+      @include media-up(1440px) {
         display: block;
       }
     }
