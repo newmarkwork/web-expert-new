@@ -1,0 +1,231 @@
+.workflow {
+  overflow: hidden;
+
+  &__steps {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 80px 0;
+
+    @include media-down($laptop-width) {
+      display: none;
+    }
+
+    &-line {
+      position: relative;
+      width: 100%;
+      height: 2px;
+
+      background-color: var(--primary);
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: inherit;
+        height: inherit;
+        background-color: var(--primary);
+        z-index: -1;
+      }
+
+      &::before {
+        left: -50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+    }
+
+    &-dots {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 110px;
+    }
+
+    &-dot {
+      position: relative;
+      width: 50px;
+      height: 50px;
+
+      border-radius: 50%;
+
+      background-color: var(--white);
+      border: 2px solid var(--primary);
+      margin-right: auto;
+
+      &::before,
+      &::after {
+        position: absolute;
+
+        left: 50%;
+        content: '';
+        transform: translateX(-50%);
+
+        background-color: var(--primary);
+      }
+
+      &::before {
+        width: 2px;
+        height: 42px;
+      }
+
+      &:nth-of-type(even) {
+        &::before {
+          top: -43px;
+        }
+
+        &::after {
+          top: -50px;
+        }
+      }
+
+      &:nth-of-type(odd) {
+        &::before {
+          top: 47px;
+        }
+
+        &::after {
+          top: 80px;
+        }
+      }
+
+      &::after {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+
+        background-color: var(--primary);
+      }
+    }
+
+    &-inner-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+
+      background-color: var(--primary);
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__list {
+    @extend %list-reset;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 240px;
+
+    @include media-down($laptop-width) {
+      display: flex;
+      flex-direction: column;
+      grid-row-gap: 0;
+    }
+
+    &-item {
+      min-width: fit-content;
+      display: flex;
+      flex-direction: column;
+
+      @include media-down($laptop-width) {
+        position: relative;
+        padding-left: 40px;
+        padding-bottom: 40px;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          width: 30px;
+          height: 30px;
+
+          content: '';
+          background-color: var(--primary);
+          border: 2px solid var(--primary);
+          box-shadow: inset 0 0 0 8px var(--primary-color);
+          border-radius: 50%;
+        }
+
+        &:not(:last-child)::after {
+          position: absolute;
+          top: 30px;
+          left: 14px;
+
+          width: 2px;
+          height: calc(100% - 30px);
+
+          content: '';
+
+          background-color: var(--primary);
+        }
+      }
+
+      &:nth-child(even) {
+        justify-content: flex-end;
+
+        @include media-down($laptop-width) {
+          justify-content: flex-start;
+        }
+      }
+
+      &-title {
+        display: inline-block;
+        font-size: clamp(22px, 2.6vw, 28px);
+        margin-bottom: 16px;
+      }
+
+      &-text {
+        margin: 0;
+      }
+
+      &:nth-child(odd) {
+        grid-row: 2/3;
+      }
+
+      &:nth-child(even) {
+        grid-row: 1/2;
+      }
+
+      &:nth-child(1) {
+        grid-column: 1/4;
+      }
+
+      &:nth-child(2) {
+        grid-column: 2/5;
+      }
+
+      &:nth-child(3) {
+        grid-column: 5/8;
+      }
+
+      &:nth-child(4) {
+        grid-column: 6/9;
+      }
+
+      &:nth-child(5) {
+        grid-column: 9/12;
+      }
+
+      &:nth-child(6) {
+        grid-column: 10/13;
+      }
+    }
+  }
+}
