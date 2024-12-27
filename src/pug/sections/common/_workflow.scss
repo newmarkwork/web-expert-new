@@ -78,7 +78,7 @@
         height: 42px;
       }
 
-      &:nth-of-type(even) {
+      &:nth-of-type(odd) {
         &::before {
           top: -43px;
         }
@@ -88,7 +88,7 @@
         }
       }
 
-      &:nth-of-type(odd) {
+      &:nth-of-type(even) {
         &::before {
           top: 47px;
         }
@@ -177,7 +177,7 @@
         }
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
         justify-content: flex-end;
 
         @include media-down($laptop-width) {
@@ -195,11 +195,11 @@
         margin: 0;
       }
 
-      &:nth-child(odd) {
+      &:nth-child(even) {
         grid-row: 2/3;
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
         grid-row: 1/2;
       }
 

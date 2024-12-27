@@ -6,8 +6,8 @@ h5,
 h6,
 .base-title,
 .main-title {
-  margin-top: 0;
-  margin-bottom: 1.2em;
+  // margin-top: 0;
+  // margin-bottom: 1.2em;
   font-weight: var(--fw-sb);
 }
 
@@ -22,11 +22,12 @@ h1 {
 }
 
 h2 {
-  font-size: calc(var(--fs-md) * 1.8);
+  font-size: calc(var(--fs-md) * 1.4);
+  margin: 0.42em 0;
 }
 
 h3 {
-  font-size: calc(var(--fs-md) * 1.4);
+  font-size: calc(var(--fs-md) * 1.3);
 }
 
 h4 {
@@ -61,8 +62,8 @@ a {
 .main-text {
   display: inline-block;
   width: 100%;
-  font-size: clamp(14px, 2.6vw, 18px);
-  font-weight: var(--fw-l);
+  // font-size: clamp(14px, 2.6vw, 18px);
+  // font-weight: var(--fw-l);
   color: var(--white);
 }
 
